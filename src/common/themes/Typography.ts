@@ -1,7 +1,7 @@
 import { TypographyOptions } from "@mui/material/styles/createTypography";
 
 const baseTypographyOptions: TypographyOptions = {
-  fontFamily: "Exo",
+  fontFamily: "IBM Plex Mono",
   h1: {
     fontSize: "40px",
   },

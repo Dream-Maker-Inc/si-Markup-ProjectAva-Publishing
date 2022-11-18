@@ -1,4 +1,3 @@
-import { useCustomMediaQuery } from "@/common/themes/useCustomQueries";
 import { css } from "@emotion/react";
 import { Button, Popover, Typography } from "@mui/material";
 import Image from "next/image";

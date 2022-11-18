@@ -1,5 +1,4 @@
 import { css } from "@emotion/react";
-import Image from "next/image";
 
 export const Banner = () => {
   return (

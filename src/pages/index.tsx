@@ -1,4 +1,4 @@
-import { HomeView } from "@/domains/Home";
+import { HomeView } from "@/domains/Home/view";
 import type { NextPage } from "next";
 import React from "react";
 

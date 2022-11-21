@@ -3,6 +3,7 @@ import { css } from "@emotion/react";
 import { Typography } from "@mui/material";
 import Image from "next/image";
 import { MediaQueries } from "@/common/themes/Limit";
+import { SwiperArticle } from "./components/SwiperArticle";
 
 export const Project = () => {
   return (
@@ -29,6 +30,7 @@ export const Project = () => {
           持续提供优质<span className="text-blue">虚拟人形</span>偶像。
         </Typography>
       </div>
+      <SwiperArticle />
     </div>
   );
 };
@@ -39,6 +41,7 @@ const sx = {
     aspect-ratio: 1/0.996;
     background-color: ${Color.BgLightDark};
     position: relative;
+    overflow: hidden;
   `,
   bgAvatarWrapper: css`
     position: absolute;

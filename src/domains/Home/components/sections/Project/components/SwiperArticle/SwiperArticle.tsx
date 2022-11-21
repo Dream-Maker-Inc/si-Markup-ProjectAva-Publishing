@@ -1,9 +1,9 @@
 import { css } from "@emotion/react";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper, SwiperSlide, useSwiperSlide } from "swiper/react";
 import "swiper/css";
 import SwiperCore, { Autoplay, EffectCoverflow, Pagination } from "swiper";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Button, Typography } from "@mui/material";
 
 import "swiper/css/navigation";
@@ -13,8 +13,13 @@ import { Color } from "@/common/themes/Colors";
 
 export const SwiperArticle = () => {
   const [swiper, setSwiper] = useState<SwiperCore>();
+  const [currentCardIndex, setCurrentCardIndex] = useState(1);
   const slideNext = () => swiper?.slideNext();
   const slidePrev = () => swiper?.slidePrev();
+
+  const swiperSlide = useSwiperSlide();
+  console.log(swiperSlide?.isPrev);
+
   return (
     <div css={sx.root}>
       <div css={sx.container}>
@@ -24,73 +29,90 @@ export const SwiperArticle = () => {
             color={Color.PrimaryGrey}
             css={sx.cardCountText}
           >
-            <span className="text-white">01</span> / 05
+            <span className="text-white">0{currentCardIndex}</span> / 05
           </Typography>
-
           <div css={sx.btnWrapper}>
-            <div css={sx.btn}>
-              <Image
-                fill
-                src={"/assets/project/swiper/icon/ic-prev-inactive.svg"}
-                alt="previous"
-                css={sx.inactive}
-              />
-              <Image
-                fill
-                src={"/assets/project/swiper/icon/ic-prev.svg"}
-                alt="previous"
-                css={sx.active}
-              />
+            <div
+              css={sx.btn}
+              onClick={currentCardIndex === 1 ? () => null : slidePrev}
+            >
+              {currentCardIndex === 1 ? (
+                <Image
+                  fill
+                  src={"/assets/project/swiper/icon/ic-prev-inactive.svg"}
+                  alt="previous"
+                />
+              ) : (
+                <Image
+                  fill
+                  src={"/assets/project/swiper/icon/ic-prev.svg"}
+                  alt="previous"
+                />
+              )}
             </div>
-            <div css={sx.btn}>
-              <Image
-                fill
-                src={"/assets/project/swiper/icon/ic-next-inactive.svg"}
-                alt="next"
-                css={sx.inactive}
-              />
-              <Image
-                fill
-                src={"/assets/project/swiper/icon/ic-next.svg"}
-                alt="next"
-                css={sx.active}
-              />
+            <div
+              css={sx.btn}
+              onClick={currentCardIndex === 5 ? () => null : slideNext}
+            >
+              {currentCardIndex === 5 ? (
+                <Image
+                  fill
+                  src={"/assets/project/swiper/icon/ic-next-inactive.svg"}
+                  alt="next"
+                />
+              ) : (
+                <Image
+                  fill
+                  src={"/assets/project/swiper/icon/ic-next.svg"}
+                  alt="next"
+                />
+              )}
             </div>
           </div>
         </div>
-        <Swiper
-          spaceBetween={40}
-          slidesPerView={2.6}
-          initialSlide={0}
-          grabCursor
-          pagination={{ clickable: true }}
-          loop={false}
-          // autoplay={{
-          //   delay: 3000,
-          // }}
-          modules={[Autoplay, Pagination]}
-          onSwiper={(swiper) => setSwiper(swiper)}
-        >
-          {AileyCards.map((it, index) => (
-            <SwiperSlide key={index}>
-              <div css={sx.card}>
-                <div css={sx.cardContainer}>
-                  <Typography
-                    className="text-green"
-                    fontWeight={500}
-                    css={sx.cardTitle}
-                  >
-                    {it.title}
-                  </Typography>
-                  <Typography fontWeight={400} color="white" css={sx.cardDesc}>
-                    {it.desc}
-                  </Typography>
+        <div css={sx.swiper}>
+          <Swiper
+            spaceBetween={40}
+            slidesPerView={2.6}
+            initialSlide={0}
+            grabCursor
+            loop={false}
+            // autoplay={{
+            //   delay: 3000,
+            // }}
+            modules={[Autoplay]}
+            onSwiper={(swiper) => {
+              setSwiper(swiper);
+            }}
+            onSlideChange={() =>
+              setCurrentCardIndex(swiper ? swiper?.realIndex + 1 : 1)
+            }
+          >
+            {AileyCards.map((it, index) => (
+              <SwiperSlide key={index} className="custom-swiper-slide">
+                <div css={sx.card}>
+                  <div css={sx.cardContainer}>
+                    <Typography
+                      className="text-green"
+                      fontWeight={500}
+                      css={sx.cardTitle}
+                    >
+                      {it.title}
+                    </Typography>
+                    <Typography
+                      fontWeight={400}
+                      color="white"
+                      css={sx.cardDesc}
+                    >
+                      {it.desc}
+                    </Typography>
+                  </div>
+                  <div css={sx.filter}></div>
                 </div>
-                <div css={sx.filter}></div>
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
       </div>
     </div>
   );
@@ -100,12 +122,13 @@ const sx = {
   root: css`
     position: absolute;
     width: 100%;
-    bottom: 23.5vw;
+    bottom: 24.8vw;
   `,
   container: css`
     width: 100%;
     padding-left: 9.16vw;
   `,
+  swiper: css``,
 
   card: css`
     width: 33.05vw;
@@ -148,28 +171,25 @@ const sx = {
     width: 100%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding-right: 9.3vw;
     margin-bottom: 50px;
   `,
 
   cardCountText: css`
     font-size: 28px;
-    line-height: 50.4px;
+    height: 50px;
   `,
 
   btnWrapper: css`
     display: flex;
+    align-items: center;
     gap: 2.91vw;
-    align-self: flex-end;
   `,
   btn: css`
     position: relative;
     width: 1.94vw;
     aspect-ratio: 1;
+    cursor: pointer;
   `,
-
-  inactive: css`
-    display: none;
-  `,
-  active: css``,
 };

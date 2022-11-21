@@ -103,7 +103,6 @@ const sx = {
     width: 7.15vw;
     aspect-ratio: 1/0.446;
   `,
-
   languageButton: css`
     height: 100%;
     padding: unset;
@@ -116,7 +115,6 @@ const sx = {
     align-items: center;
     gap: 0.95vw;
   `,
-
   arrow: css`
     position: relative;
     width: 1vw;

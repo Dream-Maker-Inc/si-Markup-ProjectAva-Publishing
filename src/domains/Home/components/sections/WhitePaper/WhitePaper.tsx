@@ -53,7 +53,6 @@ const sx = {
     width: 100%;
     aspect-ratio: 1/0.704;
     background-color: #0d0803;
-
     display: flex;
     align-items: center;
     justify-content: center;

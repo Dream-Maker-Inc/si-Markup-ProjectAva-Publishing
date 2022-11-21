@@ -31,7 +31,7 @@ const sx = {
   `,
   text: css`
     font-size: 2.3vw;
-    line-height: 56px;
+    line-height: 1;
   `,
   span: css`
     width: 100%;

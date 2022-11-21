@@ -25,10 +25,11 @@ export const WhitePaper = () => {
           textAlign="center"
           css={sx.mainDesc}
         >
-          随着<span css={sx.green}>AI技术的发展</span>
-          与元宇宙类的<span css={sx.green}>虚拟空间</span>的普及，
+          随着<span className="text-green">AI技术的发展</span>
+          与元宇宙类的<span className="text-green">虚拟空间</span>的普及，
           <br />
-          <span css={sx.blue}>超空间</span>里的新自我认知与社区正走向大众。
+          <span className="text-blue">超空间</span>
+          里的新自我认知与社区正走向大众。
         </Typography>
         <Button variant="contained" css={sx.button}>
           <Typography color="black" fontWeight={500} css={sx.buttonText}>
@@ -52,7 +53,7 @@ const sx = {
     position: relative;
     width: 100%;
     aspect-ratio: 1/0.704;
-    background-color: #0d0803;
+    background-color: ${Color.BgLightDark};
     display: flex;
     align-items: center;
     justify-content: center;
@@ -77,12 +78,7 @@ const sx = {
     margin-top: 5.55%;
     letter-spacing: 0.2px;
   `,
-  green: css`
-    color: ${Color.LightGreen};
-  `,
-  blue: css`
-    color: ${Color.LightBlue};
-  `,
+
   button: css`
     width: 17vw;
     aspect-ratio: 1/0.26;

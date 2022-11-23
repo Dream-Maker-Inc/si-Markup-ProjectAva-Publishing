@@ -12,6 +12,7 @@ export enum Color {
   LightBlue = "#4ADEFF",
   LightYellow = "#FFEF92",
   LightPurple = "#8C14EB",
+  LightBlack = "#4F4F4F",
 
   PrimaryGrey = "#767676",
   DarkGrey = "#33312F",

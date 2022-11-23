@@ -5,6 +5,7 @@ import {
   GreenItem,
   PinkItem,
   PurpleItem,
+  TotalCountItem,
   YellowItem,
 } from "./elements";
 export const CircleChart = () => {
@@ -17,6 +18,7 @@ export const CircleChart = () => {
         <PurpleItem />
         <GreenItem />
         <PinkItem />
+        <TotalCountItem />
       </div>
     </div>
   );

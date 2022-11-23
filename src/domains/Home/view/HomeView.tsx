@@ -1,5 +1,4 @@
-import Head from "next/head";
-import { Footer } from "../components/Footer/Footer";
+import { Footer } from "@/common/components/Footer";
 import { Header } from "../components/Header/Header";
 import { Banner } from "../components/sections/Banner";
 import { Line } from "../components/sections/Line";

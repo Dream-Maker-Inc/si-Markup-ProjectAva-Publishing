@@ -16,7 +16,6 @@ export const Tokenomics = () => {
 const sx = {
   root: css`
     width: 100%;
-    /* aspect-ratio: 1/1.192; */
     background-color: black;
     padding-top: 9.72vw;
     padding-bottom: 15.97vw;

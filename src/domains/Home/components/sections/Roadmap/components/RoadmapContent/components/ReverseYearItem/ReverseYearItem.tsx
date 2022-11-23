@@ -22,19 +22,16 @@ const sx = {
     flex-direction: column;
     align-items: center;
   `,
-
   polygon: css`
     position: relative;
     width: 3.47vw;
     aspect-ratio: 1;
   `,
-
   dottedLine: css`
     position: relative;
     width: 0.069vw;
     aspect-ratio: 1/74;
   `,
-
   content: css`
     display: flex;
     flex-direction: column;
@@ -53,7 +50,6 @@ const sx = {
   ul: css`
     text-align: center;
   `,
-
   text: css`
     &::before {
       content: "· ";
@@ -64,7 +60,6 @@ const sx = {
     font-size: 36px;
     line-height: 1;
   `,
-
   imageBackground: css`
     width: 86%;
     height: 100%;

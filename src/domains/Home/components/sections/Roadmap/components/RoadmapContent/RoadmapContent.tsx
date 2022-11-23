@@ -1,7 +1,7 @@
 import { css } from "@emotion/react";
-import { Line } from "./elements/Line";
-import { ReverseYearItem } from "./elements/ReverseYearItem";
-import { YearItem } from "./elements/YearItem";
+import { Line } from "./components/Line";
+import { ReverseYearItem } from "./components/ReverseYearItem";
+import { YearItem } from "./components/YearItem";
 import { ReverseYearItemModels, YearItemModels } from "./models/year.model";
 
 export const RoadmapContent = () => {

@@ -34,14 +34,14 @@ const sx = {
     position: relative;
     width: 0.069vw;
     flex-grow: 1;
+    //border 사용 시
+    //border: 0.069vw dashed white;
   `,
-
   polygon: css`
     position: relative;
     width: 3.47vw;
     aspect-ratio: 1;
   `,
-
   box: css`
     width: 12.22vw;
     aspect-ratio: 1/0.363;
@@ -65,7 +65,6 @@ const sx = {
     font-size: 36px;
     line-height: 1;
   `,
-
   imageBackground: css`
     width: 86%;
     height: 100%;

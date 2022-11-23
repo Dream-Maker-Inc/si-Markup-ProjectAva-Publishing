@@ -1,9 +1,9 @@
 import { Color } from "@/common/themes/Colors";
 import { css } from "@emotion/react";
 import { Typography } from "@mui/material";
-import { FlowSlideProps } from "../../models/flow.model";
+import { FlowSlideType } from "../../models/flow.model";
 
-export const FlowSlide = ({ slideTitle, slideTextList }: FlowSlideProps) => {
+export const FlowSlide = ({ slideTitle, slideTextList }: FlowSlideType) => {
   return (
     <div css={sx.root}>
       <Typography

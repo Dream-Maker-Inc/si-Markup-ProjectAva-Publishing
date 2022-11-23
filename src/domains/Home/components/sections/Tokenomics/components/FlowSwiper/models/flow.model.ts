@@ -1,9 +1,9 @@
-export type FlowSlideProps = {
+export type FlowSlideType = {
   slideTitle: string;
   slideTextList: string[];
 };
 
-export const FlowSlideModels: FlowSlideProps[] = [
+export const FlowSlideModels: FlowSlideType[] = [
   {
     slideTitle: "inflationary flow",
     slideTextList: ["销毁NFT时SWAP", "DEX流动性池", "人气排名奖励", "投票奖励"],

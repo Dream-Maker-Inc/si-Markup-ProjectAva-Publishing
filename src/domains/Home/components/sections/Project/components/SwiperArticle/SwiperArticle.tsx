@@ -91,7 +91,10 @@ export const SwiperArticle = () => {
             {AileyCards.map((it, index) => (
               <SwiperSlide key={index} className="custom-swiper-slide">
                 <div css={sx.card}>
-                  <div css={sx.cardContainer}>
+                  <div className="card-image" css={sx.cardImage}>
+                    <Image fill src={it.hoverImage} alt="image" />
+                  </div>
+                  <div className="card-content" css={sx.cardContainer}>
                     <Typography
                       className="text-green"
                       fontWeight={500}
@@ -129,12 +132,29 @@ const sx = {
     padding-left: 9.16vw;
   `,
   swiper: css``,
-
+  cardImage: css`
+    display: none;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+  `,
   card: css`
     width: 33.05vw;
     aspect-ratio: 1/0.529;
     background-color: rgba(255, 255, 255, 0.05);
     position: relative;
+    z-index: 1;
+
+    &:hover {
+      .card-image {
+        display: block;
+      }
+
+      .card-content {
+        display: none;
+      }
+    }
   `,
 
   cardContainer: css`

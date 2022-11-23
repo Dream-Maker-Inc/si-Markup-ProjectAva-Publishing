@@ -64,6 +64,16 @@ const sx = {
     font-size: 36px;
     line-height: 1;
   `,
+
+  imageBackground: css`
+    width: 86%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: black;
+  `,
 };
 
 const ContentSection = ({ year, content }: YearItemType) => {
@@ -94,6 +104,7 @@ const ContentSection = ({ year, content }: YearItemType) => {
 const PolygonSection = () => {
   return (
     <div css={sx.polygon}>
+      <div css={sx.imageBackground}></div>
       <Image fill src={"/assets/roadmap/ic-polygon.svg"} alt="ploygon" />
     </div>
   );

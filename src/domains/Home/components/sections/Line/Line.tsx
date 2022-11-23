@@ -3,9 +3,7 @@ import { Typography } from "@mui/material";
 
 export const Line = () => {
   const text = "Virtual Celebrity Living in the Metaverse";
-
   let list = [];
-
   for (let i = 0; i < text.length; i++) {
     list.push(text.charAt(i));
   }

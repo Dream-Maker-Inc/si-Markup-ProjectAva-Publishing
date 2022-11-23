@@ -46,7 +46,6 @@ const sx = {
     flex-direction: column;
     position: relative;
   `,
-
   title: css`
     position: relative;
     font-size: 64px;
@@ -65,7 +64,6 @@ const sx = {
     grid-template-columns: 1fr 1fr;
     column-gap: 15%;
   `,
-
   cardContainer: css`
     width: 100%;
     border-top: 1.5px solid #919191;
@@ -83,7 +81,6 @@ const sx = {
     line-height: 180%;
     word-break: keep-all;
   `,
-
   opacity: css`
     position: absolute;
     width: 100%;

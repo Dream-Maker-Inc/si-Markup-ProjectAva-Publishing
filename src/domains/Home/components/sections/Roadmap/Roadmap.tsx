@@ -14,7 +14,6 @@ export const Roadmap = () => {
 const sx = {
   root: css`
     width: 100%;
-    /* aspect-ratio: 1/0.689; */
     background-color: black;
     text-align: center;
   `,

@@ -58,14 +58,12 @@ const sx = {
     align-items: center;
     justify-content: center;
   `,
-
   content: css`
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
   `,
-
   mainText: css`
     font-size: 150px;
     line-height: 180px;
@@ -78,7 +76,6 @@ const sx = {
     margin-top: 5.55%;
     letter-spacing: 0.2px;
   `,
-
   button: css`
     width: 17vw;
     aspect-ratio: 1/0.26;
@@ -89,7 +86,6 @@ const sx = {
     gap: 5.2%;
     margin-top: 5.55%;
   `,
-
   buttonText: css`
     font-size: 18px;
     letter-spacing: 0.2px;

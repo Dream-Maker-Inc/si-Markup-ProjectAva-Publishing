@@ -3,8 +3,8 @@ import { Swiper, SwiperSlide, useSwiperSlide } from "swiper/react";
 import "swiper/css";
 import SwiperCore, { Autoplay, EffectCoverflow, Pagination } from "swiper";
 import Image from "next/image";
-import { useEffect, useState } from "react";
-import { Button, Typography } from "@mui/material";
+import { useState } from "react";
+import { Typography } from "@mui/material";
 
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -77,9 +77,6 @@ export const SwiperArticle = () => {
             initialSlide={0}
             grabCursor
             loop={false}
-            // autoplay={{
-            //   delay: 3000,
-            // }}
             modules={[Autoplay]}
             onSwiper={(swiper) => {
               setSwiper(swiper);
@@ -186,7 +183,6 @@ const sx = {
     font-size: 16px;
     line-height: 180%;
   `,
-
   swiperHeader: css`
     width: 100%;
     display: flex;
@@ -195,12 +191,10 @@ const sx = {
     padding-right: 9.3vw;
     margin-bottom: 50px;
   `,
-
   cardCountText: css`
     font-size: 28px;
     height: 50px;
   `,
-
   btnWrapper: css`
     display: flex;
     align-items: center;

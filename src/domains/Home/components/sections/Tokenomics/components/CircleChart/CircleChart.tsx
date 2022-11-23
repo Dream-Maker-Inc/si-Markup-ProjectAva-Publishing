@@ -29,6 +29,9 @@ const sx = {
     width: 100%;
     display: flex;
     justify-content: center;
+
+    // between flow slide gap
+    margin-bottom: 12.5vw;
   `,
   image: css`
     position: relative;
@@ -66,7 +69,6 @@ const sx = {
     width: 16.66vw;
     aspect-ratio: 1/0.212;
   `,
-
   boxText: css`
     font-size: 16px;
     line-height: 1;

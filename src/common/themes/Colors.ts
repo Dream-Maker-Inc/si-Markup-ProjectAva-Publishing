@@ -14,6 +14,7 @@ export enum Color {
   LightPurple = "#8C14EB",
 
   PrimaryGrey = "#767676",
+  DarkGrey = "#33312F",
 }
 
 export const lightPalette: PaletteOptions = {

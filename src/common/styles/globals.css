@@ -2,20 +2,6 @@
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 
-/* @font-face {
-  font-family: "XinYiGuanHeiTi";
-  src: url("/fonts/Fontquan-XinYiGuanHeiTi\ Regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Porter Sans Block";
-  src: url("/fonts/porterSans/porter-sans-inline-block.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-} */
-
 html,
 body {
   width: 100%;

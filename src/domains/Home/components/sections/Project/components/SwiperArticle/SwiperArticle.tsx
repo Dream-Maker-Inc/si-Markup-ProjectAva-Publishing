@@ -4,7 +4,7 @@ import "swiper/css";
 import SwiperCore, { Autoplay, EffectCoverflow, Pagination } from "swiper";
 import Image from "next/image";
 import { useState } from "react";
-import { Typography } from "@mui/material";
+import { Button, Typography } from "@mui/material";
 
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -16,9 +16,26 @@ export const SwiperArticle = () => {
   const [currentCardIndex, setCurrentCardIndex] = useState(1);
   const slideNext = () => swiper?.slideNext();
   const slidePrev = () => swiper?.slidePrev();
+  const [count, setCount] = useState(1);
 
   const swiperSlide = useSwiperSlide();
-  console.log(swiperSlide?.isPrev);
+
+  const onCountPlus = () => {
+    setCount(count + 1);
+  };
+  const onCountMinus = () => {
+    setCount(count - 1);
+  };
+
+  const onSlideNext = () => {
+    onCountPlus();
+    slideNext();
+  };
+
+  const onSlidePrev = () => {
+    slidePrev();
+    onCountMinus();
+  };
 
   return (
     <div css={sx.root}>
@@ -29,45 +46,60 @@ export const SwiperArticle = () => {
             color={Color.PrimaryGrey}
             css={sx.cardCountText}
           >
-            <span className="text-white">0{currentCardIndex}</span> / 05
+            <span className="text-white">0{count}</span> / 05
           </Typography>
           <div css={sx.btnWrapper}>
-            <div
-              css={sx.btn}
-              onClick={currentCardIndex === 1 ? () => null : slidePrev}
-            >
-              {currentCardIndex === 1 ? (
+            {count === 1 ? (
+              <div css={sx.btnInactive}>
                 <Image
                   fill
                   src={"/assets/project/swiper/icon/ic-prev-inactive.svg"}
                   alt="previous"
                 />
-              ) : (
+              </div>
+            ) : count === 5 ? (
+              <div css={sx.btn} onClick={onCountMinus}>
                 <Image
                   fill
                   src={"/assets/project/swiper/icon/ic-prev.svg"}
                   alt="previous"
                 />
-              )}
-            </div>
-            <div
-              css={sx.btn}
-              onClick={currentCardIndex === 5 ? () => null : slideNext}
-            >
-              {currentCardIndex === 5 ? (
+              </div>
+            ) : (
+              <div css={sx.btn} onClick={onSlidePrev}>
                 <Image
                   fill
-                  src={"/assets/project/swiper/icon/ic-next-inactive.svg"}
-                  alt="next"
+                  src={"/assets/project/swiper/icon/ic-prev.svg"}
+                  alt="previous"
                 />
-              ) : (
+              </div>
+            )}
+
+            {count <= 3 ? (
+              <div css={sx.btn} onClick={onSlideNext}>
                 <Image
                   fill
                   src={"/assets/project/swiper/icon/ic-next.svg"}
                   alt="next"
                 />
-              )}
-            </div>
+              </div>
+            ) : count === 4 ? (
+              <div css={sx.btn} onClick={onCountPlus}>
+                <Image
+                  fill
+                  src={"/assets/project/swiper/icon/ic-next.svg"}
+                  alt="next"
+                />
+              </div>
+            ) : (
+              <div css={sx.btnInactive}>
+                <Image
+                  fill
+                  src={"/assets/project/swiper/icon/ic-next-inactive.svg"}
+                  alt="next"
+                />
+              </div>
+            )}
           </div>
         </div>
         <div css={sx.swiper}>
@@ -85,32 +117,44 @@ export const SwiperArticle = () => {
               setCurrentCardIndex(swiper ? swiper?.realIndex + 1 : 1)
             }
           >
-            {AileyCards.map((it, index) => (
-              <SwiperSlide key={index} className="custom-swiper-slide">
-                <div css={sx.card}>
-                  <div className="card-image" css={sx.cardImage}>
-                    <Image fill src={it.hoverImage} alt="image" />
-                  </div>
-                  <div className="card-content" css={sx.cardContainer}>
-                    <Typography
-                      className="text-green"
-                      fontWeight={500}
-                      css={sx.cardTitle}
-                    >
-                      {it.title}
-                    </Typography>
-                    <Typography
-                      fontWeight={400}
-                      color="white"
-                      css={sx.cardDesc}
-                    >
-                      {it.desc}
-                    </Typography>
-                  </div>
-                  <div css={sx.filter}></div>
-                </div>
-              </SwiperSlide>
-            ))}
+            {AileyCards.map((it, index) => {
+              if (index < 5) {
+                return (
+                  <SwiperSlide key={index} className="custom-swiper-slide">
+                    <div css={sx.card}>
+                      <div className="card-image" css={sx.cardImage}>
+                        <Image fill src={it.hoverImage} alt="image" />
+                      </div>
+                      <div className="card-content" css={sx.cardContainer}>
+                        <Typography
+                          className="text-green"
+                          fontWeight={500}
+                          css={sx.cardTitle}
+                        >
+                          {it.title}
+                        </Typography>
+                        <Typography
+                          fontWeight={400}
+                          color="white"
+                          css={sx.cardDesc}
+                        >
+                          {it.desc}
+                        </Typography>
+                      </div>
+                      <div css={sx.filter}></div>
+                    </div>
+                  </SwiperSlide>
+                );
+              } else {
+                return (
+                  <SwiperSlide key={index} className="custom-swiper-slide">
+                    <div css={sx.emptyCard}>
+                      <div className="card-image" css={sx.cardImage}></div>
+                    </div>
+                  </SwiperSlide>
+                );
+              }
+            })}
           </Swiper>
         </div>
       </div>
@@ -152,6 +196,14 @@ const sx = {
         display: none;
       }
     }
+  `,
+
+  emptyCard: css`
+    width: 33.05vw;
+    aspect-ratio: 1/0.529;
+    background-color: transparent;
+    position: relative;
+    z-index: 1;
   `,
 
   cardContainer: css`
@@ -205,5 +257,11 @@ const sx = {
     width: 1.94vw;
     aspect-ratio: 1;
     cursor: pointer;
+  `,
+
+  btnInactive: css`
+    position: relative;
+    width: 1.94vw;
+    aspect-ratio: 1;
   `,
 };

@@ -12,7 +12,6 @@ export const WhitePaper = () => {
           fontWeight={400}
           color={Color.LightPink}
           textAlign="center"
-          fontFamily={"XinYiGuanHeiTi"}
           css={sx.mainText}
         >
           元宇宙中的
@@ -69,6 +68,7 @@ const sx = {
     line-height: 180px;
     letter-spacing: -1px;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: "XinYiGuanHeiTi";
   `,
   mainDesc: css`
     font-size: 24px;

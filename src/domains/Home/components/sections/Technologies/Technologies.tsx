@@ -14,7 +14,6 @@ export const Technologies = () => {
           {"Technologies"}
         </Typography>
         <div css={sx.wrapper}>
-          {/* <Card title={"test"} desc={"test"} /> */}
           {models.map((it, index) => (
             <Card key={index} title={it.title} desc={it.desc} />
           ))}
@@ -38,7 +37,6 @@ const sx = {
       align-items: unset;
     }
   `,
-
   container: css`
     width: 74.7vw;
     aspect-ratio: 1/0.654;
@@ -60,7 +58,6 @@ const sx = {
       padding-top: 60px;
     }
   `,
-
   wrapper: css`
     flex: 1;
     width: 100%;
@@ -87,7 +84,6 @@ const sx = {
       padding-top: 60px;
     }
   `,
-
   cardContainer: css`
     width: 100%;
     border-top: 1.5px solid #919191;
@@ -97,7 +93,6 @@ const sx = {
       padding-top: 2.77vw;
     }
   `,
-
   title: css`
     position: relative;
     font-size: 64px;
@@ -110,7 +105,6 @@ const sx = {
       font-size: 36px;
     }
   `,
-
   cardTitle: css`
     font-size: 36px;
     line-height: 160%;

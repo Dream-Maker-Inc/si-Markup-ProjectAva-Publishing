@@ -21,6 +21,7 @@ export const Banner = () => {
 const sx = {
   root: css`
     width: 100%;
+    padding-top: 8.33%;
   `,
   videoFrame: css`
     width: 100%;

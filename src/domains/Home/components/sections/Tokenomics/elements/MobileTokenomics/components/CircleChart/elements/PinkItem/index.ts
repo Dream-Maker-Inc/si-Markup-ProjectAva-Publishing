@@ -1,1 +1,0 @@
-export { PinkItem } from "./PinkItem";

@@ -1,6 +1,7 @@
 import { css } from "@emotion/react";
 import Image from "next/image";
 import { TotalCountItem } from "./elements";
+import { ChartLegend } from "./elements/ChartLegend";
 export const CircleChart = () => {
   return (
     <div css={sx.root}>
@@ -8,6 +9,7 @@ export const CircleChart = () => {
         <Image fill src="/assets/chart/img-chart.png" alt="chart" />
       </div>
       <TotalCountItem />
+      <ChartLegend />
     </div>
   );
 };

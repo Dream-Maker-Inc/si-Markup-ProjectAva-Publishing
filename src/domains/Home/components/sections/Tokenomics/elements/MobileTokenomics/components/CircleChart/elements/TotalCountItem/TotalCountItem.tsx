@@ -19,6 +19,7 @@ const sx = {
     justify-content: center;
     align-items: center;
     border: 1px solid white;
+    margin-bottom: 8.33vw;
   `,
 
   text: css`

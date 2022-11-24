@@ -12,7 +12,7 @@ export const CircleChart = () => {
   return (
     <div css={sx.root}>
       <div css={sx.image}>
-        <Image fill src="/assets/chart/img-chart.svg" alt="chart" />
+        <Image fill src="/assets/chart/img-chart.png" alt="chart" />
         <BlueItem />
         <YellowItem />
         <PurpleItem />

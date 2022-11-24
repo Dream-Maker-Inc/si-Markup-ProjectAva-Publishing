@@ -1,3 +1,4 @@
+import { MediaQueries } from "@/common/themes/Limit";
 import { css } from "@emotion/react";
 
 export const Banner = () => {
@@ -23,6 +24,11 @@ const sx = {
     width: 100%;
     padding-top: 8.33%;
     background-color: black;
+
+    // mobile header height
+    @media ${MediaQueries.sm} {
+      padding-top: 16.6%;
+    }
   `,
   videoFrame: css`
     width: 100%;
@@ -30,6 +36,11 @@ const sx = {
     z-index: 0;
     aspect-ratio: 1/0.562;
     overflow: hidden;
+
+    @media ${MediaQueries.sm} {
+      min-height: 579px;
+      aspect-ratio: 1/1.6;
+    }
   `,
   video: css`
     position: relative;
@@ -38,5 +49,10 @@ const sx = {
     margin: 0 auto;
     object-fit: cover;
     z-index: 1;
+
+    // Ailey cetner align
+    @media ${MediaQueries.sm} {
+      width: 125%;
+    }
   `,
 };

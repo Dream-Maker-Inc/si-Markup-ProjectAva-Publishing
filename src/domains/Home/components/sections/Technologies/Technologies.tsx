@@ -5,7 +5,7 @@ import { models } from "./model/card.model";
 
 export const Technologies = () => {
   return (
-    <div css={sx.root}>
+    <div id="technologies" css={sx.root}>
       <Image
         fill
         src={"/assets/technologies/bg-face.png"}

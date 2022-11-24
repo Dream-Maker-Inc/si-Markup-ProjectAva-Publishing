@@ -5,7 +5,7 @@ import { TokenomicsTitle } from "./components/TokenomicsTitle";
 
 export const Tokenomics = () => {
   return (
-    <div css={sx.root}>
+    <div id="tokenomics" css={sx.root}>
       <TokenomicsTitle />
       <CircleChart />
       <FlowSwiper />
@@ -18,7 +18,7 @@ const sx = {
     width: 100%;
     background-color: black;
     padding-top: 9.72vw;
-    padding-bottom: 15.97vw;
+    padding-bottom: 5/28vw;
     text-align: center;
   `,
 };

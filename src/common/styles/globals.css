@@ -22,9 +22,12 @@ body {
   height: 100%;
   padding: 0;
   margin: 0;
-  scroll-behavior: smooth;
 
   font-family: "IBM Plex Mono", monospace;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 a {
@@ -56,15 +59,3 @@ a {
 .text-white {
   color: white;
 }
-
-/* .swiper .swiper-wrapper .swiper-slide {
-  width: unset !important;
-} */
-
-/* .swiper .swiper-wrapper .swiper-slide-active {
-  width: unset !important;
-}  */
-
-/* .swiper .swiper-wrapper .custom-swiper-slide {
-  width: fit-content !important;
-} */

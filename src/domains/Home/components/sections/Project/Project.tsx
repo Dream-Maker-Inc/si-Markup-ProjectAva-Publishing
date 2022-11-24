@@ -7,7 +7,7 @@ import { SwiperArticle } from "./components/SwiperArticle";
 
 export const Project = () => {
   return (
-    <div css={sx.root}>
+    <div id="project-ailey" css={sx.root}>
       <div css={sx.bgAvatarWrapper}>
         <div css={sx.bgAvatar}>
           <Image fill src={"/assets/project/bg-avatar.png"} alt="img" />

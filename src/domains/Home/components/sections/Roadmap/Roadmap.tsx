@@ -4,7 +4,7 @@ import { RoadmapTitle } from "./components/RoadmapTitle";
 
 export const Roadmap = () => {
   return (
-    <div css={sx.root}>
+    <div id="roadmap" css={sx.root}>
       <RoadmapTitle />
       <RoadmapContent />
     </div>
@@ -14,6 +14,7 @@ export const Roadmap = () => {
 const sx = {
   root: css`
     width: 100%;
+    padding-top: 9.72vw;
     background-color: black;
     text-align: center;
   `,

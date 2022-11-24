@@ -22,6 +22,7 @@ const sx = {
   root: css`
     width: 100%;
     padding-top: 8.33%;
+    background-color: black;
   `,
   videoFrame: css`
     width: 100%;
@@ -29,7 +30,6 @@ const sx = {
     z-index: 0;
     aspect-ratio: 1/0.562;
     overflow: hidden;
-    background-color: black;
   `,
   video: css`
     position: relative;

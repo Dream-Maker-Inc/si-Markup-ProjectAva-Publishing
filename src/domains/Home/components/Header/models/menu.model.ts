@@ -1,6 +1,6 @@
 export const menu = [
-  { item: "ABOUT", href: "/#about" },
-  { item: "TECHNOLOGIES", href: "/#about" },
-  { item: "TOKENOMICS", href: "/#about" },
-  { item: "ROADMAP", href: "/#about" },
+  { item: "ABOUT", href: "#project-ailey" },
+  { item: "TECHNOLOGIES", href: "#technologies" },
+  { item: "TOKENOMICS", href: "#tokenomics" },
+  { item: "ROADMAP", href: "#roadmap" },
 ];

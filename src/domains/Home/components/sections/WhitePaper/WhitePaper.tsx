@@ -1,4 +1,5 @@
 import { Color } from "@/common/themes/Colors";
+import { MediaQueries } from "@/common/themes/Limit";
 import { css } from "@emotion/react";
 import { Button, Typography } from "@mui/material";
 import Image from "next/image";
@@ -56,6 +57,10 @@ const sx = {
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @media ${MediaQueries.sm} {
+      aspect-ratio: 1/1.776;
+    }
   `,
   content: css`
     width: 100%;
@@ -65,16 +70,30 @@ const sx = {
   `,
   mainText: css`
     font-size: 150px;
-    line-height: 180px;
+    line-height: 120%;
     letter-spacing: -1px;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     font-family: "XinYiGuanHeiTi";
+
+    @media ${MediaQueries.xs} {
+      font-size: 60px;
+    }
   `,
   mainDesc: css`
     font-size: 24px;
     line-height: 200%;
     margin-top: 5.55%;
     letter-spacing: 0.2px;
+
+    @media ${MediaQueries.sm} {
+      max-width: 265px;
+      line-height: 160%;
+      margin-top: 22.22%;
+    }
+
+    @media ${MediaQueries.xs} {
+      font-size: 14px;
+    }
   `,
   button: css`
     width: 17vw;
@@ -85,10 +104,18 @@ const sx = {
     align-items: center;
     gap: 5.2%;
     margin-top: 5.55%;
+
+    @media ${MediaQueries.sm} {
+      width: 63.33vw;
+      margin-top: 28.88%;
+    }
   `,
   buttonText: css`
     font-size: 18px;
     letter-spacing: 0.2px;
+    @media ${MediaQueries.xs} {
+      font-size: 16px;
+    }
   `,
   buttonArrow: css`
     position: relative;

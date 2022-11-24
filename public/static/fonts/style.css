@@ -1,0 +1,15 @@
+@font-face {
+  font-family: "XinYiGuanHeiTi";
+  src: url("/static/fonts/fontQuan/Fontquan-XinYiGuanHeiTi\ Regular.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Porter Sans Block";
+  src: url("/static/fonts/porterSans/porter-sans-inline-block.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}

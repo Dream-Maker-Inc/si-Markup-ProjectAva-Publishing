@@ -29,7 +29,6 @@ const sx = {
     width: 100%;
     display: flex;
     justify-content: center;
-
     // between flow slide gap
     margin-bottom: 12.5vw;
   `,
@@ -37,37 +36,6 @@ const sx = {
     position: relative;
     width: 33.9vw;
     aspect-ratio: 1;
-  `,
-
-  imgPurpleWrapper: css`
-    position: absolute;
-    top: 0;
-    right: 0;
-  `,
-  imgPurple: css`
-    position: relative;
-    width: 8.54vw;
-    aspect-ratio: 1/0.422;
-  `,
-  imgGreenWrapper: css`
-    position: absolute;
-    top: 0;
-    right: 0;
-  `,
-  imgGreen: css`
-    position: relative;
-    width: 13.19vw;
-    aspect-ratio: 1/0.273;
-  `,
-  imgPinkWrapper: css`
-    position: absolute;
-    top: 0;
-    right: 0;
-  `,
-  imgPink: css`
-    position: relative;
-    width: 16.66vw;
-    aspect-ratio: 1/0.212;
   `,
   boxText: css`
     font-size: 16px;

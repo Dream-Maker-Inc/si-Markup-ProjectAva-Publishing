@@ -1,14 +1,13 @@
+import { useCustomMediaQuery } from "@/common/themes/useCustomQueries";
 import { css } from "@emotion/react";
-import { CircleChart } from "./components/CircleChart";
-import { FlowSwiper } from "./components/FlowSwiper";
-import { TokenomicsTitle } from "./components/TokenomicsTitle";
+import { LaptopTokenomics } from "./elements/LaptopTokenomics";
+import { MobileTokenomics } from "./elements/MobileTokenomics";
 
 export const Tokenomics = () => {
+  const { isMobile } = useCustomMediaQuery();
   return (
     <div id="tokenomics" css={sx.root}>
-      <TokenomicsTitle />
-      <CircleChart />
-      <FlowSwiper />
+      {isMobile ? <MobileTokenomics /> : <LaptopTokenomics />}
     </div>
   );
 };
@@ -16,9 +15,5 @@ export const Tokenomics = () => {
 const sx = {
   root: css`
     width: 100%;
-    background-color: black;
-    padding-top: 9.72vw;
-    padding-bottom: 5/28vw;
-    text-align: center;
   `,
 };

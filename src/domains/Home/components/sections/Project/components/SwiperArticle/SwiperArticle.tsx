@@ -1,11 +1,10 @@
 import { css } from "@emotion/react";
 import { Swiper, SwiperSlide, useSwiperSlide } from "swiper/react";
 import "swiper/css";
-import SwiperCore, { Autoplay, EffectCoverflow, Pagination } from "swiper";
+import SwiperCore, { Autoplay } from "swiper";
 import Image from "next/image";
 import { useState } from "react";
-import { Button, Typography } from "@mui/material";
-
+import { Typography } from "@mui/material";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { AileyCards } from "./model/card.model";

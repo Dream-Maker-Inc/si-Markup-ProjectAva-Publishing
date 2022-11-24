@@ -2,10 +2,12 @@ import { css } from "@emotion/react";
 import { Button, Popover, Typography } from "@mui/material";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { useState } from "react";
 import { menu } from "../../models/menu.model";
 
 export const LaptopHeader = () => {
+  const router = useRouter();
   const [anchorEl, setAnchorEl] = useState<HTMLButtonElement | null>(null);
 
   const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
@@ -21,7 +23,7 @@ export const LaptopHeader = () => {
 
   return (
     <div css={sx.root}>
-      <div css={sx.logo}>
+      <div onClick={() => router.push("/")} css={sx.logo}>
         <Image fill src={"/assets/logo.svg"} alt="logo" />
       </div>
       <nav css={sx.nav}>
@@ -87,6 +89,7 @@ const sx = {
     position: relative;
     width: 7.81%;
     aspect-ratio: 1/0.38;
+    cursor: pointer;
   `,
   nav: css`
     display: flex;

@@ -1,5 +1,5 @@
 export enum ScreenType {
-  xs = 376,
+  xs = 360,
   sm = 576, // Mobile
   md = 768,
   lg = 1024, // Tablet

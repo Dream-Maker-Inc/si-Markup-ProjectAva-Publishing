@@ -1,0 +1,1 @@
+export { LaptopBackgroundImage } from "./LaptopBackgroundImage";

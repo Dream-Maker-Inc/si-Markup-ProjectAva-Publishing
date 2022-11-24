@@ -113,7 +113,7 @@ const PolygonSection = () => {
 const DottedLine = () => {
   return (
     <div css={sx.dottedLine}>
-      <Image fill src={"/assets/roadmap/ic-dotted-line.png"} alt="" />
+      <Image fill src={"/assets/roadmap/ic-dotted-line-2.png"} alt="" />
     </div>
   );
 };

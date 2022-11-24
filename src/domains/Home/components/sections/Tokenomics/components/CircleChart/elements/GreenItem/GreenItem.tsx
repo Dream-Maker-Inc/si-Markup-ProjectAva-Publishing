@@ -7,7 +7,7 @@ export const GreenItem = () => {
   return (
     <div css={sx.wrapper}>
       <div css={sx.image}>
-        <Image fill src="/assets/chart/img-green.png" alt="" />
+        <Image fill src="/assets/chart/img-green.svg" alt="" />
       </div>
       <GreenBox />
     </div>

@@ -8,7 +8,7 @@ export const PurpleItem = () => {
     <div css={sx.wrapper}>
       <PurpleBox />
       <div css={sx.image}>
-        <Image fill src="/assets/chart/img-purple.png" alt="" />
+        <Image fill src="/assets/chart/img-purple.svg" alt="" />
       </div>
     </div>
   );

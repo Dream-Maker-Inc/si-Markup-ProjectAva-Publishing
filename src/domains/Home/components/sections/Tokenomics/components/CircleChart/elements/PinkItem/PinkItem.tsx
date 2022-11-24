@@ -7,7 +7,7 @@ export const PinkItem = () => {
   return (
     <div css={sx.wrapper}>
       <div css={sx.image}>
-        <Image fill src="/assets/chart/img-pink.png" alt="" />
+        <Image fill src="/assets/chart/img-pink.svg" alt="" />
       </div>
       <PinkBox />
     </div>

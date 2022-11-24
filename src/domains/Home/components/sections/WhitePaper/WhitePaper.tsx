@@ -107,6 +107,7 @@ const sx = {
 
     @media ${MediaQueries.sm} {
       width: 63.33vw;
+      aspect-ratio: 1/0.228;
       margin-top: 28.88%;
     }
   `,

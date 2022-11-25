@@ -40,11 +40,11 @@ const sx = {
     transform: translate(-50%, -50%);
     background-color: black;
   `,
-  line: css`
+  dottedLine: css`
     width: 17.5vw;
     height: 1px;
     border: 1px dashed ${Color.LightBlue};
-    margin-top: 4.5%;
+    margin-top: 5.5%;
   `,
   contentRoot: css`
     margin-top: -1%;
@@ -124,4 +124,4 @@ const ContentSection = ({ content }: ContentSection) => {
   );
 };
 
-const DottedLine = () => <div css={sx.line}></div>;
+const DottedLine = () => <div css={sx.dottedLine}></div>;

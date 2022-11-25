@@ -32,7 +32,7 @@ export const LaptopHeader = () => {
             <Link key={index} href={it.href}>
               <Typography
                 component={"li"}
-                fontSize="16px"
+                fontSize="1.11vw"
                 lineHeight={1}
                 fontWeight={500}
                 color="white"
@@ -49,7 +49,7 @@ export const LaptopHeader = () => {
             css={sx.languageButton}
             onClick={handleClick}
           >
-            <Typography color="white" lineHeight={1}>
+            <Typography color="white" fontSize="1.11vw" lineHeight={1}>
               EN
             </Typography>
             <div css={sx.arrow}>
@@ -107,13 +107,13 @@ const sx = {
     aspect-ratio: 1/0.446;
   `,
   languageButton: css`
+    width: 100%;
     height: 100%;
     padding: unset;
     min-height: unset;
     background-color: rgba(255, 255, 255, 0.2);
     border: 1px solid white;
     border-radius: 50px;
-    font-size: 16px;
     display: flex;
     align-items: center;
     gap: 0.95vw;

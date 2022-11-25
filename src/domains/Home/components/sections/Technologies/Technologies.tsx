@@ -40,7 +40,6 @@ const sx = {
   `,
   container: css`
     width: 74.7vw;
-    height: 100%;
     aspect-ratio: 1/0.654;
     margin-left: 9.16vw;
     display: flex;

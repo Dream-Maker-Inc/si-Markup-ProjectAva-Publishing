@@ -1,0 +1,1 @@
+export { SwiperHeader } from "./SwiperHeader";

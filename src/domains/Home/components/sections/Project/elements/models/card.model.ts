@@ -1,4 +1,4 @@
-type AileyCardsType = {
+export type AileyCardsType = {
   title: string;
   desc: string;
   hoverImage: string;

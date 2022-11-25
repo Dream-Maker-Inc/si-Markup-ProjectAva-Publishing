@@ -1,0 +1,1 @@
+export { AileyBackgroundImage } from "./AileyBackgroundImage";

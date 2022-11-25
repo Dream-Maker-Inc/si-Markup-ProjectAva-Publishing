@@ -1,1 +1,0 @@
-export { SwiperCard } from "./SwiperCard";

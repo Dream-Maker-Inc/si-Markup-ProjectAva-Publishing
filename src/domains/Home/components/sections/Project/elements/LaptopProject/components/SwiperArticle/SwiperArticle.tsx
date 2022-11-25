@@ -7,12 +7,11 @@ import { useState } from "react";
 import { Typography } from "@mui/material";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { AileyCards } from "./model/card.model";
 import { Color } from "@/common/themes/Colors";
+import { AileyCards } from "../../../models/card.model";
 
 export const SwiperArticle = () => {
   const [swiper, setSwiper] = useState<SwiperCore>();
-  const [currentCardIndex, setCurrentCardIndex] = useState(1);
   const slideNext = () => swiper?.slideNext();
   const slidePrev = () => swiper?.slidePrev();
   const [count, setCount] = useState(1);
@@ -112,9 +111,6 @@ export const SwiperArticle = () => {
             onSwiper={(swiper) => {
               setSwiper(swiper);
             }}
-            onSlideChange={() =>
-              setCurrentCardIndex(swiper ? swiper?.realIndex + 1 : 1)
-            }
           >
             {AileyCards.map((it, index) => {
               if (index < 5) {
@@ -226,12 +222,12 @@ const sx = {
   `,
 
   cardTitle: css`
-    font-size: 36px;
+    font-size: 2.5vw;
     line-height: 180%;
     margin-bottom: 10px;
   `,
   cardDesc: css`
-    font-size: 16px;
+    font-size: 1.11vw;
     line-height: 180%;
   `,
   swiperHeader: css`
@@ -243,8 +239,8 @@ const sx = {
     margin-bottom: 50px;
   `,
   cardCountText: css`
-    font-size: 28px;
-    height: 50px;
+    font-size: 1.95vw;
+    height: 3.47vw;
   `,
   btnWrapper: css`
     display: flex;

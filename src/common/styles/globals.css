@@ -21,6 +21,10 @@ a {
   text-decoration: none;
 }
 
+p {
+  letter-spacing: 0.2px;
+}
+
 * {
   box-sizing: border-box;
 }

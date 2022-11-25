@@ -14,7 +14,7 @@ export const Roadmap = () => {
 const sx = {
   root: css`
     width: 100%;
-    padding-top: 9.72vw;
+    padding-top: 22.22vw;
     background-color: black;
     text-align: center;
   `,

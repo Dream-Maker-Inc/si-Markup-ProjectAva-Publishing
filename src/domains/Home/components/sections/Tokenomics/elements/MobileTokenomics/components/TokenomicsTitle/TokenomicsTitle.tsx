@@ -13,6 +13,7 @@ export const TokenomicsTitle = () => {
 
 const sx = {
   title: css`
+    width: 100%;
     font-family: "Bebas neue";
     font-size: 10vw;
     line-height: 130%;

@@ -40,6 +40,7 @@ const sx = {
   `,
   container: css`
     width: 74.7vw;
+    height: 100%;
     aspect-ratio: 1/0.654;
     margin-left: 9.16vw;
     display: flex;
@@ -52,11 +53,7 @@ const sx = {
       margin-left: unset;
       padding: 0 5.55vw;
       padding-top: 16.66vw;
-    }
-
-    @media ${MediaQueries.xs} {
-      padding: 0 20px;
-      padding-top: 60px;
+      padding-bottom: 33.33vw;
     }
   `,
   wrapper: css`
@@ -71,7 +68,7 @@ const sx = {
 
     @media ${MediaQueries.sm} {
       aspect-ratio: 1/2.44;
-      padding-top: 16.66vw;
+      padding-top: unset;
       padding-left: unset;
       grid-template-columns: unset;
       column-gap: unset;
@@ -79,10 +76,6 @@ const sx = {
       flex-direction: column;
       align-items: flex-start;
       justify-content: space-between;
-    }
-
-    @media ${MediaQueries.xs} {
-      padding-top: 60px;
     }
   `,
   title: css`
@@ -92,6 +85,11 @@ const sx = {
     font-family: "Bebas neue";
     letter-spacing: 0.2px;
     z-index: 2;
+
+    @media ${MediaQueries.sm} {
+      font-size: 10vw;
+      margin-bottom: 16.66vw;
+    }
 
     @media ${MediaQueries.xs} {
       font-size: 36px;

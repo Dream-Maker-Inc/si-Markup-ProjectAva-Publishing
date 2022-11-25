@@ -1,4 +1,5 @@
 import { Color } from "@/common/themes/Colors";
+import { MediaQueries } from "@/common/themes/Limit";
 import { css } from "@emotion/react";
 import { Typography } from "@mui/material";
 
@@ -17,6 +18,11 @@ const sx = {
     font-size: 64px;
     line-height: 130%;
     letter-spacing: 0.2px;
-    /* margin-bottom: 6.87vw; */
+
+    @media ${MediaQueries.sm} {
+      font-size: 10vw;
+      height: 13.33vw;
+      margin-bottom: 11.94vw;
+    }
   `,
 };

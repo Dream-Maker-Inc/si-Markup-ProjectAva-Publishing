@@ -2,7 +2,7 @@ import { Color } from "@/common/themes/Colors";
 import { css } from "@emotion/react";
 import { Typography } from "@mui/material";
 import Image from "next/image";
-import { YearItemType } from "../../models/year.model";
+import { YearItemType } from "../../../../models/year.model";
 
 export const ReverseYearItem = ({ year, content }: YearItemType) => {
   return (

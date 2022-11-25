@@ -69,30 +69,27 @@ const sx = {
     align-items: center;
   `,
   mainText: css`
-    font-size: 150px;
+    font-size: 10.41vw;
     line-height: 120%;
     letter-spacing: -1px;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     font-family: "XinYiGuanHeiTi";
 
-    @media ${MediaQueries.xs} {
-      font-size: 60px;
+    @media ${MediaQueries.sm} {
+      font-size: 16.66vw;
     }
   `,
   mainDesc: css`
-    font-size: 24px;
+    font-size: 1.66vw;
     line-height: 200%;
     margin-top: 5.55%;
     letter-spacing: 0.2px;
 
     @media ${MediaQueries.sm} {
-      max-width: 265px;
+      font-size: 3.88vw;
+      max-width: 72vw;
       line-height: 160%;
       margin-top: 22.22%;
-    }
-
-    @media ${MediaQueries.xs} {
-      font-size: 14px;
     }
   `,
   button: css`
@@ -112,10 +109,10 @@ const sx = {
     }
   `,
   buttonText: css`
-    font-size: 18px;
+    font-size: 1.25vw;
     letter-spacing: 0.2px;
-    @media ${MediaQueries.xs} {
-      font-size: 16px;
+    @media ${MediaQueries.sm} {
+      font-size: 4.44vw;
     }
   `,
   buttonArrow: css`

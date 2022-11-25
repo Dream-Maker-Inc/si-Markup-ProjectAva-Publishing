@@ -1,4 +1,5 @@
 import { Color } from "@/common/themes/Colors";
+import { MediaQueries } from "@/common/themes/Limit";
 import { css } from "@emotion/react";
 import { Typography } from "@mui/material";
 
@@ -20,8 +21,15 @@ const sx = {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media ${MediaQueries.sm} {
+      aspect-ratio: 1/0.155;
+    }
   `,
   text: css`
-    font-size: 12px;
+    font-size: 0.833vw;
+    @media ${MediaQueries.sm} {
+      font-size: 2.77vw;
+    }
   `,
 };

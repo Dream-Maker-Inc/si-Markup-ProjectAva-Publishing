@@ -27,7 +27,7 @@ const sx = {
   mobileImage: css`
     position: relative;
     width: 426.66vw;
-    aspect-ratio: 1/0.76;
+    height: 100%;
   `,
   image: css`
     z-index: 0;

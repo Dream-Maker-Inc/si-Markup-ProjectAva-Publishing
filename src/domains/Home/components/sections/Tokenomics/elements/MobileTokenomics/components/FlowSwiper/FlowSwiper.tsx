@@ -12,7 +12,10 @@ export const FlowSwiper = () => {
         initialSlide={0}
         grabCursor
         pagination={{ clickable: true }}
-        loop={false}
+        loop={true}
+        autoplay={{
+          delay: 5000,
+        }}
         modules={[Autoplay, Pagination]}
         css={sx.swiper}
       >

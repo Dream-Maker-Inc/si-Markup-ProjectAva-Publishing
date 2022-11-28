@@ -13,6 +13,7 @@ export enum Color {
   LightBlack = "#4F4F4F",
   PrimaryGrey = "#767676",
   DarkGrey = "#33312F",
+  ModalBg = "#363636",
 }
 
 export const lightPalette: PaletteOptions = {

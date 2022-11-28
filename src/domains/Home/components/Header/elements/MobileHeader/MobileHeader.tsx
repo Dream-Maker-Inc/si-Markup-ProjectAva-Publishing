@@ -1,20 +1,18 @@
 import { MediaQueries } from "@/common/themes/Limit";
 import { css } from "@emotion/react";
-import { useState } from "react";
 import { Logo } from "./components/Logo";
 import { MobileIconButton } from "./components/MobileIconButton";
-import { MobileMenu } from "./components/MobileMenu";
 
-export const MobileHeader = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const onMenuChange = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
+type MobileHeaderProps = {
+  onMenuClick: () => void;
+  open: boolean;
+};
+
+export const MobileHeader = ({ open, onMenuClick }: MobileHeaderProps) => {
   return (
     <div css={sx.root}>
       <Logo />
-      <MobileIconButton onClick={onMenuChange} isMenuOpen={isMenuOpen} />
-      <MobileMenu isMenuOpen={isMenuOpen} />
+      <MobileIconButton isMenuOpen={open} onClick={onMenuClick} />
     </div>
   );
 };
@@ -27,11 +25,7 @@ const sx = {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-left: 24px;
-    padding-right: 20px;
-
-    @media ${MediaQueries.xs} {
-      height: 60px;
-    }
+    padding-left: 6.66vw;
+    padding-right: 5.55vw;
   `,
 };

@@ -1,20 +1,27 @@
 import { css } from "@emotion/react";
-import { Typography } from "@mui/material";
+import { Dialog, Typography } from "@mui/material";
 import Image from "next/image";
 import Link from "next/link";
-import { LanguageButton } from "../../../../components/LanguageButton";
-import { menu } from "../../../../models/menu.model";
-import { SnsButtons } from "../SnsButtons";
+import { LanguageButton } from "../../components/LanguageButton";
+import { menu } from "../../models/menu.model";
+import { Logo } from "../MobileHeader/components/Logo";
+import { MobileIconButton } from "../MobileHeader/components/MobileIconButton";
+import { SnsButtons } from "../MobileHeader/components/SnsButtons";
 
-type MobileMenuProps = {
-  isMenuOpen: boolean;
+type MobileMenuViewProps = {
+  open: boolean;
+  onClose: () => void;
 };
 
-export const MobileMenu = ({ isMenuOpen }: MobileMenuProps) => {
+export const MobileMenuView = ({ open, onClose }: MobileMenuViewProps) => {
   return (
-    <nav css={sx.nav(isMenuOpen)}>
-      <div css={sx.container}>
+    <Dialog open={open} fullScreen>
+      <div css={sx.root}>
         <Image fill src={"/assets/header/img-mesh.png"} alt="mesh" />
+        <div css={sx.top}>
+          <Logo />
+          <MobileIconButton isMenuOpen={open} onClick={onClose} />
+        </div>
         <ul css={sx.ul}>
           {menu.map((it, index) => (
             <li key={index} css={sx.li}>
@@ -29,31 +36,31 @@ export const MobileMenu = ({ isMenuOpen }: MobileMenuProps) => {
         </ul>
         <SnsButtons />
       </div>
-    </nav>
+    </Dialog>
   );
 };
 
 const sx = {
-  nav: (isMenuOpen: boolean) => css`
-    display: ${isMenuOpen ? "block" : "none"};
+  root: css`
     width: 100vw;
     height: 100vh;
-    position: absolute;
-    left: 0;
-    top: 0;
     background-color: black;
-    z-index: 3;
-  `,
-  container: css`
-    width: 100%;
-    height: 100%;
     position: relative;
+  `,
+  top: css`
+    width: 100%;
+    aspect-ratio: 1/0.166;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 6.66vw;
+    padding-right: 5.55vw;
   `,
   ul: css`
     width: 100%;
     display: flex;
     flex-direction: column;
-    padding: 25vw 5.55vw;
+    padding: 8.33vw 5.55vw 0 5.55vw;
   `,
   li: css`
     width: 100%;

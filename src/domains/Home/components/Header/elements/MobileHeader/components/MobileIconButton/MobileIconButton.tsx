@@ -4,13 +4,13 @@ import { IconButton } from "@mui/material";
 import Image from "next/image";
 
 type MobileIconButtonProps = {
-  onClick: () => void;
   isMenuOpen: boolean;
+  onClick: () => void;
 };
 
 export const MobileIconButton = ({
-  onClick,
   isMenuOpen,
+  onClick,
 }: MobileIconButtonProps) => {
   return (
     <IconButton onClick={onClick} css={sx.iconButton}>

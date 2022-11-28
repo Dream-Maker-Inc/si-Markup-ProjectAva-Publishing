@@ -2,6 +2,7 @@ import { css } from "@emotion/react";
 import { Dialog, Typography } from "@mui/material";
 import Image from "next/image";
 import Link from "next/link";
+import { Router, useRouter } from "next/router";
 import { LanguageButton } from "../../components/LanguageButton";
 import { menu } from "../../models/menu.model";
 import { Logo } from "../MobileHeader/components/Logo";
@@ -14,6 +15,12 @@ type MobileMenuViewProps = {
 };
 
 export const MobileMenuView = ({ open, onClose }: MobileMenuViewProps) => {
+  const router = useRouter();
+
+  const onLinkClick = (href: string) => {
+    router.push(href);
+    onClose();
+  };
   return (
     <Dialog open={open} fullScreen>
       <div css={sx.root}>
@@ -24,12 +31,10 @@ export const MobileMenuView = ({ open, onClose }: MobileMenuViewProps) => {
         </div>
         <ul css={sx.ul}>
           {menu.map((it, index) => (
-            <li key={index} css={sx.li}>
-              <Link href={it.href} onClick={onClose}>
-                <Typography fontSize="6.66vw" lineHeight={1} color="white">
-                  {it.item}
-                </Typography>
-              </Link>
+            <li key={index} css={sx.li} onClick={() => onLinkClick(it.href)}>
+              <Typography fontSize="6.66vw" lineHeight={1} color="white">
+                {it.item}
+              </Typography>
             </li>
           ))}
           <LanguageButton isMenuOpen={true} />

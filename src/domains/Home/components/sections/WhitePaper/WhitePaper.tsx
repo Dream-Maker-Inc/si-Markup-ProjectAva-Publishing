@@ -102,6 +102,12 @@ const sx = {
     gap: 5.2%;
     margin-top: 5.55%;
 
+    &:hover {
+      background-color: ${Color.LightBlue};
+      opacity: 0.8;
+      transition: 0.5s;
+    }
+
     @media ${MediaQueries.sm} {
       width: 63.33vw;
       aspect-ratio: 1/0.228;

@@ -1,5 +1,5 @@
 import { css } from "@emotion/react";
-import { Swiper, SwiperSlide, useSwiperSlide } from "swiper/react";
+import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import SwiperCore, { Autoplay } from "swiper";
 import Image from "next/image";
@@ -14,25 +14,14 @@ export const SwiperArticle = () => {
   const [swiper, setSwiper] = useState<SwiperCore>();
   const slideNext = () => swiper?.slideNext();
   const slidePrev = () => swiper?.slidePrev();
-  const [count, setCount] = useState(1);
-
-  const swiperSlide = useSwiperSlide();
-
-  const onCountPlus = () => {
-    setCount(count + 1);
-  };
-  const onCountMinus = () => {
-    setCount(count - 1);
-  };
+  const [activeIndex, setActiveIndex] = useState(1);
 
   const onSlideNext = () => {
-    onCountPlus();
     slideNext();
   };
 
   const onSlidePrev = () => {
     slidePrev();
-    onCountMinus();
   };
 
   return (
@@ -44,22 +33,14 @@ export const SwiperArticle = () => {
             color={Color.PrimaryGrey}
             css={sx.cardCountText}
           >
-            <span className="text-white">0{count}</span> / 05
+            <span className="text-white">0{activeIndex}</span> / 04
           </Typography>
           <div css={sx.btnWrapper}>
-            {count === 1 ? (
+            {activeIndex === 1 ? (
               <div css={sx.btnInactive}>
                 <Image
                   fill
                   src={"/assets/project/swiper/icon/ic-prev-inactive.svg"}
-                  alt="previous"
-                />
-              </div>
-            ) : count === 5 ? (
-              <div css={sx.btn} onClick={onCountMinus}>
-                <Image
-                  fill
-                  src={"/assets/project/swiper/icon/ic-prev.svg"}
                   alt="previous"
                 />
               </div>
@@ -73,16 +54,8 @@ export const SwiperArticle = () => {
               </div>
             )}
 
-            {count <= 3 ? (
+            {activeIndex <= 3 ? (
               <div css={sx.btn} onClick={onSlideNext}>
-                <Image
-                  fill
-                  src={"/assets/project/swiper/icon/ic-next.svg"}
-                  alt="next"
-                />
-              </div>
-            ) : count === 4 ? (
-              <div css={sx.btn} onClick={onCountPlus}>
                 <Image
                   fill
                   src={"/assets/project/swiper/icon/ic-next.svg"}
@@ -106,8 +79,11 @@ export const SwiperArticle = () => {
             slidesPerView={2.6}
             initialSlide={0}
             grabCursor
-            loop={false}
             modules={[Autoplay]}
+            allowSlideNext={activeIndex < 4 ? true : false}
+            onSlideChange={(e) => {
+              setActiveIndex(e.activeIndex + 1);
+            }}
             onSwiper={(swiper) => {
               setSwiper(swiper);
             }}

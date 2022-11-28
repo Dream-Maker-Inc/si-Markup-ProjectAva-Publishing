@@ -32,6 +32,7 @@ const sx = {
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
   `,
   image: css`
     position: relative;

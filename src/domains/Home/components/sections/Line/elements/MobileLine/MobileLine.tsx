@@ -60,12 +60,8 @@ const sx = {
     }
   `,
   text: css`
-    font-size: 4.44vw;
+    font-size: 4.3vw;
     line-height: 120%;
-
-    @media ${MediaQueries.xs} {
-      font-size: 4.44vw;
-    }
   `,
 
   top: css`

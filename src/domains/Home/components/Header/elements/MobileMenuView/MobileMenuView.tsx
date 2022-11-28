@@ -1,8 +1,7 @@
 import { css } from "@emotion/react";
 import { Dialog, Typography } from "@mui/material";
 import Image from "next/image";
-import Link from "next/link";
-import { Router, useRouter } from "next/router";
+import { useRouter } from "next/router";
 import { LanguageButton } from "../../components/LanguageButton";
 import { menu } from "../../models/menu.model";
 import { Logo } from "../MobileHeader/components/Logo";

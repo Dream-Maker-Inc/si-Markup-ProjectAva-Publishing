@@ -9,7 +9,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { SwiperHeader } from "./components/SwiperHeader";
 import { Color } from "@/common/themes/Colors";
-import { AileyCards } from "../../../models/card.model";
+import { MobileAileyCards } from "../../../models/card.model";
 
 export const SwiperArticle = () => {
   const [swiper, setSwiper] = useState<SwiperCore>();
@@ -17,21 +17,12 @@ export const SwiperArticle = () => {
   const slidePrev = () => swiper?.slidePrev();
   const [count, setCount] = useState(1);
 
-  const onCountPlus = () => {
-    setCount(count + 1);
-  };
-  const onCountMinus = () => {
-    setCount(count - 1);
-  };
-
   const onSlideNext = () => {
-    onCountPlus();
     slideNext();
   };
 
   const onSlidePrev = () => {
     slidePrev();
-    onCountMinus();
   };
 
   return (
@@ -44,11 +35,14 @@ export const SwiperArticle = () => {
           grabCursor
           loop={false}
           modules={[Autoplay]}
+          onSlideChange={(e) => {
+            setCount(e.activeIndex + 1);
+          }}
           onSwiper={(swiper) => {
             setSwiper(swiper);
           }}
         >
-          {AileyCards.map((it, index) => (
+          {MobileAileyCards.map((it, index) => (
             <SwiperSlide key={index}>
               <div css={sx.cardContainer}>
                 <div css={sx.card}>

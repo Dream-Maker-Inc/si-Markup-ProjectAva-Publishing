@@ -25,7 +25,7 @@ export const MobileMenuView = ({ open, onClose }: MobileMenuViewProps) => {
         <ul css={sx.ul}>
           {menu.map((it, index) => (
             <li key={index} css={sx.li}>
-              <Link href={it.href}>
+              <Link href={it.href} onClick={onClose}>
                 <Typography fontSize="6.66vw" lineHeight={1} color="white">
                   {it.item}
                 </Typography>
@@ -42,8 +42,8 @@ export const MobileMenuView = ({ open, onClose }: MobileMenuViewProps) => {
 
 const sx = {
   root: css`
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     background-color: black;
     position: relative;
   `,

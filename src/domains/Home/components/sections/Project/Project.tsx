@@ -15,5 +15,6 @@ export const Project = () => {
 const sx = {
   root: css`
     width: 100%;
+    overflow-x: hidden;
   `,
 };

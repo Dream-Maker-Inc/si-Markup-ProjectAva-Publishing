@@ -11,5 +11,6 @@ export const Line = () => {
 const sx = {
   root: css`
     width: 100%;
+    overflow-x: hidden;
   `,
 };

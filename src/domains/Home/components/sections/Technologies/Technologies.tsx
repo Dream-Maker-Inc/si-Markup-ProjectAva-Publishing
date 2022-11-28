@@ -27,7 +27,7 @@ export const Technologies = () => {
 const sx = {
   root: css`
     position: relative;
-    width: 100%;
+    width: 100vw;
     aspect-ratio: 1/0.725;
     display: flex;
     align-items: center;

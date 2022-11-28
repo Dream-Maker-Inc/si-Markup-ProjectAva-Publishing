@@ -23,6 +23,7 @@ const sx = {
     position: absolute;
     top: 0;
     right: 152%;
+    overflow-x: hidden;
   `,
   mobileImage: css`
     position: relative;

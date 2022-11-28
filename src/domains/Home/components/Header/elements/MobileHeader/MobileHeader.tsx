@@ -1,5 +1,6 @@
 import { MediaQueries } from "@/common/themes/Limit";
 import { css } from "@emotion/react";
+import { AppBar, Toolbar } from "@mui/material";
 import { Logo } from "./components/Logo";
 import { MobileIconButton } from "./components/MobileIconButton";
 
@@ -19,7 +20,7 @@ export const MobileHeader = ({ open, onMenuClick }: MobileHeaderProps) => {
 
 const sx = {
   root: css`
-    width: 100%;
+    width: 100vw;
     aspect-ratio: 1/0.166;
     background-color: black;
     display: flex;

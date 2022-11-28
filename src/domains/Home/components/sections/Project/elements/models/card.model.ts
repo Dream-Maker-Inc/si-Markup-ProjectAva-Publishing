@@ -30,9 +30,4 @@ export const AileyCards: AileyCardsType[] = [
     desc: "Ailey，超越一切。",
     hoverImage: "/assets/project/swiper/ailey-5.png",
   },
-  {
-    title: "",
-    desc: "",
-    hoverImage: "",
-  },
 ];

@@ -22,7 +22,10 @@ export const TextSection = () => {
 const sx = {
   root: css`
     width: 100%;
-    margin-bottom: 22.22vw;
+    position: absolute;
+    top: 19.44vw;
+    left: 0;
+    padding: 0 5.55vw;
   `,
   title: css`
     font-size: 10vw;

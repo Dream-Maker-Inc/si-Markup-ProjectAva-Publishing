@@ -1,7 +1,8 @@
 import { css } from "@emotion/react";
 import Image from "next/image";
-import { TotalCountItem } from "./elements";
-import { ChartLegend } from "./elements/ChartLegend";
+import { TotalCountItem } from "./components";
+import { ArrowIcon } from "./components/ArrowIcon";
+import { ChartLegend } from "./components/ChartLegend";
 export const CircleChart = () => {
   return (
     <div css={sx.root}>
@@ -10,6 +11,7 @@ export const CircleChart = () => {
       </div>
       <TotalCountItem />
       <ChartLegend />
+      <ArrowIcon />
     </div>
   );
 };
@@ -17,7 +19,9 @@ export const CircleChart = () => {
 const sx = {
   root: css`
     width: 100%;
-    margin-bottom: 12.5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   `,
   image: css`
     position: relative;

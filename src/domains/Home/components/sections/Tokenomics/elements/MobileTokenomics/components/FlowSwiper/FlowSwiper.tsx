@@ -1,6 +1,6 @@
 import { css } from "@emotion/react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper";
+import { Autoplay, Pagination } from "swiper";
 import { FlowSlide } from "./elements/Slide";
 import { FlowSlideModels } from "./models/flow.model";
 
@@ -11,8 +11,10 @@ export const FlowSwiper = () => {
         slidesPerView={1}
         initialSlide={0}
         grabCursor
+        pagination={{ clickable: true }}
         loop={false}
-        modules={[Autoplay]}
+        modules={[Autoplay, Pagination]}
+        css={sx.swiper}
       >
         {FlowSlideModels.map((it, index) => (
           <SwiperSlide key={index}>
@@ -31,7 +33,10 @@ export const FlowSwiper = () => {
 const sx = {
   root: css`
     width: 100%;
-    aspect-ratio: 1/1.11;
+  `,
+  swiper: css`
+    width: 100%;
+    aspect-ratio: 1/1.25;
   `,
   container: css`
     width: 100%;

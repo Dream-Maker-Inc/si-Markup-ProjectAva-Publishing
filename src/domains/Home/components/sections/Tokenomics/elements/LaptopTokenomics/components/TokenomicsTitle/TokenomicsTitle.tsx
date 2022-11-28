@@ -13,10 +13,9 @@ export const TokenomicsTitle = () => {
 const sx = {
   title: css`
     font-family: "Bebas neue";
-    height: 83px;
-    font-size: 64px;
+    height: 5.76vw;
+    font-size: 4.44vw;
     line-height: 130%;
-    letter-spacing: 0.2px;
     margin-bottom: 9.16vw;
   `,
 };

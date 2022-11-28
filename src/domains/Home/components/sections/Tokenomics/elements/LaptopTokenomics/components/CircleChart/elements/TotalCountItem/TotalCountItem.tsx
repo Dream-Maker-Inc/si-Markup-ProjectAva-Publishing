@@ -26,7 +26,7 @@ const sx = {
   `,
 
   text: css`
-    font-size: 20px;
-    line-height: 160%;
+    font-size: 1.38vw;
+    line-height: 1;
   `,
 };

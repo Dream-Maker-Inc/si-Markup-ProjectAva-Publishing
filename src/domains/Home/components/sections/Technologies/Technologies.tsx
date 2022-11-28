@@ -79,7 +79,7 @@ const sx = {
   `,
   title: css`
     position: relative;
-    font-size: 64px;
+    font-size: 4.44vw;
     line-height: 130%;
     font-family: "Bebas neue";
     letter-spacing: 0.2px;
@@ -88,10 +88,6 @@ const sx = {
     @media ${MediaQueries.sm} {
       font-size: 10vw;
       margin-bottom: 16.66vw;
-    }
-
-    @media ${MediaQueries.xs} {
-      font-size: 36px;
     }
   `,
   opacity: css`

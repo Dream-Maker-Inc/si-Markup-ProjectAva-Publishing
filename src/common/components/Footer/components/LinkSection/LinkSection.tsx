@@ -57,7 +57,7 @@ const sx = {
   `,
   title: css`
     font-family: "Bebas neue";
-    font-size: 64px;
+    font-size: 4.44vw;
     margin-bottom: 1.18%;
     white-space: pre-wrap;
     text-align: center;

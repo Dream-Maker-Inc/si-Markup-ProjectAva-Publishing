@@ -28,7 +28,6 @@ const sx = {
     width: 5.41vw;
     aspect-ratio: 1/0.205;
   `,
-
   box: css`
     width: 18.19vw;
     aspect-ratio: 1/0.19;
@@ -37,12 +36,15 @@ const sx = {
     align-items: center;
     justify-content: center;
   `,
+  text: css`
+    font-size: 1.11vw;
+  `,
 };
 
 const YellowBox = () => {
   return (
     <div css={sx.box}>
-      <Typography color="black" fontWeight={500}>
+      <Typography color="black" fontWeight={500} css={sx.text}>
         Future Contributors
       </Typography>
     </div>

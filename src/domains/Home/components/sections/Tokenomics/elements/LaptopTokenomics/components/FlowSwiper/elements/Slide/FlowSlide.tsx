@@ -37,7 +37,7 @@ const sx = {
     gap: 0.97vw;
   `,
   title: css`
-    font-size: 36px;
+    font-size: 2.5vw;
     margin-bottom: 6.95%;
     font-family: "Bebas neue";
   `,
@@ -50,7 +50,7 @@ const sx = {
     justify-content: center;
   `,
   boxText: css`
-    font-size: 18px;
+    font-size: 1.25vw;
   `,
 };
 

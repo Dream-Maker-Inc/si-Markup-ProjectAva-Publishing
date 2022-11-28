@@ -24,35 +24,31 @@ const sx = {
   cardContainer: css`
     width: 100%;
     border-top: 1.5px solid #919191;
-    padding-top: 18px;
+    padding-top: 1.25vw;
 
     @media ${MediaQueries.sm} {
       padding-top: 2.77vw;
     }
   `,
   cardTitle: css`
-    font-size: 36px;
+    font-size: 2.5vw;
     line-height: 160%;
-    margin-bottom: 18px;
+    margin-bottom: 1.25vw;
     font-family: "Bebas neue";
     letter-spacing: 0.03em;
 
-    @media ${MediaQueries.xs} {
-      font-size: 24px;
+    @media ${MediaQueries.sm} {
+      font-size: 6.66vw;
     }
   `,
   cardDesc: css`
-    font-size: 16px;
+    font-size: 1.11vw;
     line-height: 180%;
     word-break: keep-all;
 
     @media ${MediaQueries.sm} {
       width: 77.77vw;
-    }
-
-    @media ${MediaQueries.xs} {
-      width: 77.77vw;
-      font-size: 13px;
+      font-size: 3.61vw;
     }
   `,
 };

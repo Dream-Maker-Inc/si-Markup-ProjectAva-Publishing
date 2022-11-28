@@ -38,8 +38,7 @@ const sx = {
     aspect-ratio: 1;
   `,
   boxText: css`
-    font-size: 16px;
+    font-size: 1.11vw;
     line-height: 1;
-    letter-spacing: 0.2px;
   `,
 };

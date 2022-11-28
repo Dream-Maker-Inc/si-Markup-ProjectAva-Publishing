@@ -37,12 +37,15 @@ const sx = {
     justify-content: center;
     margin-top: -8%;
   `,
+  text: css`
+    font-size: 1.11vw;
+  `,
 };
 
 const PinkBox = () => {
   return (
     <div css={sx.box}>
-      <Typography color="black" fontWeight={500}>
+      <Typography color="black" fontWeight={500} css={sx.text}>
         Investors
       </Typography>
     </div>

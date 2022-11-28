@@ -22,7 +22,7 @@ export const TextSection = () => {
 const sx = {
   textWrapper: css`
     position: absolute;
-    top: 240px;
+    top: 16.66vw;
     left: 9.16vw;
   `,
   title: css`

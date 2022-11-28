@@ -17,7 +17,6 @@ export const PurpleItem = () => {
 const sx = {
   wrapper: css`
     position: absolute;
-
     bottom: 8%;
     left: -72%;
     display: flex;
@@ -38,12 +37,15 @@ const sx = {
     justify-content: center;
     margin-top: 7.5%;
   `,
+  text: css`
+    font-size: 1.11vw;
+  `,
 };
 
 const PurpleBox = () => {
   return (
     <div css={sx.box}>
-      <Typography color="black" fontWeight={500}>
+      <Typography color="black" fontWeight={500} css={sx.text}>
         Launch Contributors
       </Typography>
     </div>

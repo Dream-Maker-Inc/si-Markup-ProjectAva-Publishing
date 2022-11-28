@@ -37,12 +37,15 @@ const sx = {
     justify-content: center;
     margin-top: 9%;
   `,
+  text: css`
+    font-size: 1.11vw;
+  `,
 };
 
 const GreenBox = () => {
   return (
     <div css={sx.box}>
-      <Typography color="black" fontWeight={500}>
+      <Typography color="black" fontWeight={500} css={sx.text}>
         NFT Swap
       </Typography>
     </div>

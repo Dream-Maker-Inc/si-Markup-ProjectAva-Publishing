@@ -33,6 +33,7 @@ const sx = {
     aspect-ratio: 1/74;
   `,
   content: css`
+    width: 26.11vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -45,19 +46,20 @@ const sx = {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 17.05%;
+    margin-bottom: 2.08vw;
   `,
   ul: css`
     text-align: center;
   `,
   text: css`
+    font-size: 1.25vw;
     &::before {
       content: "· ";
     }
   `,
   year: css`
     font-family: "Bebas neue";
-    font-size: 36px;
+    font-size: 2.5vw;
     line-height: 1;
   `,
   imageBackground: css`

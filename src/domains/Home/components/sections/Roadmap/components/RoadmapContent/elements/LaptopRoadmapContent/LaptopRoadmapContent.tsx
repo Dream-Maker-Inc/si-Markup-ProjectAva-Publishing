@@ -43,14 +43,14 @@ const sx = {
   wrapper: css`
     display: flex;
     flex: 1;
-    gap: 10.41vw;
+    gap: 1.66vw;
     margin-bottom: calc(-3.6vw / 2);
   `,
 
   reverseWrapper: css`
     display: flex;
     flex: 1;
-    gap: 10.41vw;
+    gap: 1.66vw;
     margin-top: calc(-3.6vw / 2);
   `,
 };

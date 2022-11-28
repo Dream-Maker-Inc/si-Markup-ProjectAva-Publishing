@@ -1,22 +1,20 @@
-import { Color } from "@/common/themes/Colors";
 import { MediaQueries } from "@/common/themes/Limit";
 import { css } from "@emotion/react";
-import { IconButton } from "@mui/material";
-import Image from "next/image";
+import { useState } from "react";
+import { Logo } from "./components/Logo";
+import { MobileIconButton } from "./components/MobileIconButton";
+import { MobileMenu } from "./components/MobileMenu";
 
 export const MobileHeader = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const onMenuChange = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
   return (
     <div css={sx.root}>
-      <div css={sx.logo}>
-        <Image fill src={"/assets/logo-mobile.svg"} alt="logo" />
-      </div>
-      <IconButton onClick={() => null}>
-        <div css={sx.menu}>
-          <div css={sx.icon}>
-            <Image fill src={"/assets/header/ic-menu.svg"} alt="menu" />
-          </div>
-        </div>
-      </IconButton>
+      <Logo />
+      <MobileIconButton onClick={onMenuChange} isMenuOpen={isMenuOpen} />
+      <MobileMenu isMenuOpen={isMenuOpen} />
     </div>
   );
 };
@@ -35,28 +33,5 @@ const sx = {
     @media ${MediaQueries.xs} {
       height: 60px;
     }
-  `,
-  menu: css`
-    width: 8.88vw;
-    aspect-ratio: 1;
-    background-color: rgba(255, 255, 255, 0.2);
-    border: 0.5px solid ${Color.Primary};
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    z-index: 1;
-  `,
-  icon: css`
-    position: relative;
-    width: 55.55%;
-    aspect-ratio: 1;
-    z-index: 2;
-  `,
-
-  logo: css`
-    position: relative;
-    width: 20.55vw;
-    aspect-ratio: 1/ 0.391;
   `,
 };

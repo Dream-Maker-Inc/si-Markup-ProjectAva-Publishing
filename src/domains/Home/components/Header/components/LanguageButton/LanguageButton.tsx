@@ -1,4 +1,4 @@
-import { LaunguageType } from "@/@types/LantuageType/language.enum";
+import { LaunguageType } from "@/type/LanguageType/language.enum";
 import { Color } from "@/common/themes/Colors";
 import i18n from "@/utils/i18n/locales";
 import { css } from "@emotion/react";

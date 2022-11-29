@@ -23,7 +23,7 @@ export const Menu = () => {
           </li>
         ))}
       </ul>
-      <LanguageButton />
+      <LanguageButton onClose={() => null} />
     </nav>
   );
 };

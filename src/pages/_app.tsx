@@ -4,15 +4,22 @@ import { ThemeProvider } from "@emotion/react";
 import { findTheme, ThemeTypes } from "@/common/themes/CustomThemes";
 import { Layout } from "@/common/components/Layout/Layout";
 import "@/static/fonts/style.css";
+import { RecoilRoot } from "recoil";
+import { I18nextProvider } from "react-i18next";
+import i18n from "@/utils/i18n/locales";
 import "@/utils/i18n/locales";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <ThemeProvider theme={findTheme(ThemeTypes.Light)}>
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
-    </ThemeProvider>
+    <RecoilRoot>
+      <I18nextProvider i18n={i18n}>
+        <ThemeProvider theme={findTheme(ThemeTypes.Light)}>
+          <Layout>
+            <Component {...pageProps} />
+          </Layout>
+        </ThemeProvider>
+      </I18nextProvider>
+    </RecoilRoot>
   );
 }
 

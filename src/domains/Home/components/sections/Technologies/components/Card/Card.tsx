@@ -1,5 +1,5 @@
 import { MediaQueries } from "@/common/themes/Limit";
-import { TechnologiesCardType } from "@/type/common.type";
+import { TechnologiesCardType } from "@/types/common.type";
 import { localeState } from "@/utils/recoil/locale.atom";
 import { css } from "@emotion/react";
 import { Typography } from "@mui/material";

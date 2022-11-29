@@ -1,5 +1,5 @@
 import { Color } from "@/common/themes/Colors";
-import { TokenomicsCardType } from "@/type/common.type";
+import { TokenomicsCardType } from "@/types/common.type";
 import { css } from "@emotion/react";
 import { Typography } from "@mui/material";
 

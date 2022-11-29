@@ -1,6 +1,6 @@
 import { MediaQueries } from "@/common/themes/Limit";
 import { useCustomMediaQuery } from "@/common/themes/useCustomQueries";
-import { TechnologiesCardType } from "@/type/common.type";
+import { TechnologiesCardType } from "@/types/common.type";
 import { css } from "@emotion/react";
 import { Typography } from "@mui/material";
 import { useTranslation } from "react-i18next";

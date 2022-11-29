@@ -9,7 +9,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { SwiperHeader } from "./components/SwiperHeader";
 import { Color } from "@/common/themes/Colors";
-import { ProjectCardType } from "@/type/common.type";
+import { ProjectCardType } from "@/types/common.type";
 import { useTranslation } from "react-i18next";
 
 export const SwiperArticle = () => {

@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper";
 import { FlowSlide } from "./elements/Slide";
 import { useTranslation } from "react-i18next";
-import { TokenomicsCardType } from "@/type/common.type";
+import { TokenomicsCardType } from "@/types/common.type";
 
 export const FlowSwiper = () => {
   const { t } = useTranslation("tokenomics");

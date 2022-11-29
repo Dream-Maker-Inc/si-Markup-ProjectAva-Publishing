@@ -13,3 +13,8 @@ export type TokenomicsCardType = {
   slideTitle: string;
   slideTextList: string[];
 };
+
+export type RoadmapCardType = {
+  year: string;
+  content: string[];
+};

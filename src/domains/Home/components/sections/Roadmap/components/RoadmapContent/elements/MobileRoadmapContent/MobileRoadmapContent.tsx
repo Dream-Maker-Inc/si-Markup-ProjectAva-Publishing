@@ -1,13 +1,18 @@
 import { YearItem } from "./components/YearItem";
 import { css } from "@emotion/react";
-import { TotalYearItemModls } from "../../models/year.model";
 import { Line } from "./components/Line";
+import { useTranslation } from "react-i18next";
+import { RoadmapCardType } from "@/types/common.type";
 
 export const MobileRoadmapContent = () => {
+  const { t } = useTranslation("roadmap");
+  const totalYearItemModls: RoadmapCardType[] = t("TotalYearItemModls", {
+    returnObjects: true,
+  });
   return (
     <div css={sx.root}>
       <Line />
-      {TotalYearItemModls.map((it, index) => (
+      {totalYearItemModls.map((it, index) => (
         <YearItem key={index} year={it.year} content={it.content} />
       ))}
     </div>

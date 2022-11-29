@@ -1,21 +1,30 @@
+import { RoadmapCardType } from "@/types/common.type";
 import { css } from "@emotion/react";
-import { ReverseYearItemModels, YearItemModels } from "../../models/year.model";
+import { useTranslation } from "react-i18next";
 import { Line } from "./components/Line";
 import { ReverseYearItem } from "./components/ReverseYearItem";
 import { YearItem } from "./components/YearItem";
 
 export const LaptopRoadmapContent = () => {
+  const { t } = useTranslation("roadmap");
+  const yearItemModels: RoadmapCardType[] = t("YearItemModels", {
+    returnObjects: true,
+  });
+  const reverseYearItemModels: RoadmapCardType[] = t("ReverseYearItemModels", {
+    returnObjects: true,
+  });
+
   return (
     <div css={sx.root}>
       <div css={sx.container}>
         <div css={sx.wrapper}>
-          {YearItemModels.map((it, index) => (
+          {yearItemModels.map((it, index) => (
             <YearItem key={index} year={it.year} content={it.content} />
           ))}
         </div>
         <Line />
         <div css={sx.reverseWrapper}>
-          {ReverseYearItemModels.map((it, index) => (
+          {reverseYearItemModels.map((it, index) => (
             <ReverseYearItem key={index} year={it.year} content={it.content} />
           ))}
         </div>

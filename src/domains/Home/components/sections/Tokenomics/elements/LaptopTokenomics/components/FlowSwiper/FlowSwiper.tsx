@@ -1,4 +1,4 @@
-import { TokenomicsCardType } from "@/type/common.type";
+import { TokenomicsCardType } from "@/types/common.type";
 import { css } from "@emotion/react";
 import { useTranslation } from "react-i18next";
 import { FlowSlide } from "./elements/Slide";

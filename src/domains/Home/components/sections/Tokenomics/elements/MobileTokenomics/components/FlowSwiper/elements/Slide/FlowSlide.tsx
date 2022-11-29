@@ -65,7 +65,7 @@ type BoxProps = {
 const Box = ({ text }: BoxProps) => {
   return (
     <div css={sx.box}>
-      <Typography color={Color.Primary} lineHeight={1} css={sx.boxText}>
+      <Typography color={Color.Primary} lineHeight={"160%"} css={sx.boxText}>
         {text}
       </Typography>
     </div>

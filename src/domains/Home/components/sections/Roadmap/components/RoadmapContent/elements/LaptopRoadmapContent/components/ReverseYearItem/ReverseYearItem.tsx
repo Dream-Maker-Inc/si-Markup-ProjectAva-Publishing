@@ -1,10 +1,10 @@
 import { Color } from "@/common/themes/Colors";
+import { RoadmapCardType } from "@/types/common.type";
 import { css } from "@emotion/react";
 import { Typography } from "@mui/material";
 import Image from "next/image";
-import { YearItemType } from "../../../../models/year.model";
 
-export const ReverseYearItem = ({ year, content }: YearItemType) => {
+export const ReverseYearItem = ({ year, content }: RoadmapCardType) => {
   return (
     <div css={sx.root}>
       <PolygonSection />
@@ -73,7 +73,7 @@ const sx = {
   `,
 };
 
-const ContentSection = ({ year, content }: YearItemType) => {
+const ContentSection = ({ year, content }: RoadmapCardType) => {
   return (
     <div css={sx.content}>
       <div css={sx.box}>

@@ -1,0 +1,23 @@
+{
+  "cards": [
+    {
+      "slideTitle": "inflationary flow",
+      "slideTextList": [
+        "Swap NFT upon incineration",
+        "DEX fluidized pool",
+        "Popular ranking reward",
+        "Compensation for voting participation"
+      ]
+    },
+    {
+      "slideTitle": "Deflationary flow",
+      "slideTextList": [
+        "NFT synthesis",
+        "For purchasing premium customized items\n(clothes, hair, etc.)",
+        "When casting characters",
+        "Popular Ranking Participation Fee",
+        "Donation"
+      ]
+    }
+  ]
+}

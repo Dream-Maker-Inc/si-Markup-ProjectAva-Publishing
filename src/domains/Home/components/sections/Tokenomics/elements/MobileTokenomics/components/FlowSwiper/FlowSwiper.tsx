@@ -2,9 +2,12 @@ import { css } from "@emotion/react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper";
 import { FlowSlide } from "./elements/Slide";
-import { FlowSlideModels } from "./models/flow.model";
+import { useTranslation } from "react-i18next";
+import { TokenomicsCardType } from "@/type/common.type";
 
 export const FlowSwiper = () => {
+  const { t } = useTranslation("tokenomics");
+  const cards: TokenomicsCardType[] = t("cards", { returnObjects: true });
   return (
     <div css={sx.root}>
       <Swiper
@@ -19,7 +22,7 @@ export const FlowSwiper = () => {
         modules={[Autoplay, Pagination]}
         css={sx.swiper}
       >
-        {FlowSlideModels.map((it, index) => (
+        {cards.map((it, index) => (
           <SwiperSlide key={index}>
             <FlowSlide
               key={index}

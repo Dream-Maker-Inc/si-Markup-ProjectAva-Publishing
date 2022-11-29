@@ -8,3 +8,8 @@ export type TechnologiesCardType = {
   title: string;
   desc: string;
 };
+
+export type TokenomicsCardType = {
+  slideTitle: string;
+  slideTextList: string[];
+};

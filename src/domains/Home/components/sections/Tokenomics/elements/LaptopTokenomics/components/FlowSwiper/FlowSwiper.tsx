@@ -1,12 +1,15 @@
+import { TokenomicsCardType } from "@/type/common.type";
 import { css } from "@emotion/react";
+import { useTranslation } from "react-i18next";
 import { FlowSlide } from "./elements/Slide";
-import { FlowSlideModels } from "./models/flow.model";
 
 export const FlowSwiper = () => {
+  const { t } = useTranslation("tokenomics");
+  const cards: TokenomicsCardType[] = t("cards", { returnObjects: true });
   return (
     <div css={sx.root}>
       <div css={sx.container}>
-        {FlowSlideModels.map((it, index) => (
+        {cards.map((it, index) => (
           <FlowSlide
             key={index}
             slideTitle={it.slideTitle}

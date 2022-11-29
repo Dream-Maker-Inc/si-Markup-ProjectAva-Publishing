@@ -1,9 +1,12 @@
 import { Color } from "@/common/themes/Colors";
+import { TokenomicsCardType } from "@/type/common.type";
 import { css } from "@emotion/react";
 import { Typography } from "@mui/material";
-import { FlowSlideType } from "../../models/flow.model";
 
-export const FlowSlide = ({ slideTitle, slideTextList }: FlowSlideType) => {
+export const FlowSlide = ({
+  slideTitle,
+  slideTextList,
+}: TokenomicsCardType) => {
   return (
     <div css={sx.root}>
       <Typography
@@ -51,6 +54,7 @@ const sx = {
   `,
   boxText: css`
     font-size: 3.33vw;
+    white-space: pre-wrap;
   `,
 };
 

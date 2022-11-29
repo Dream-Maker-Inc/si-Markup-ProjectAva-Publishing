@@ -4,6 +4,7 @@ import { ThemeProvider } from "@emotion/react";
 import { findTheme, ThemeTypes } from "@/common/themes/CustomThemes";
 import { Layout } from "@/common/components/Layout/Layout";
 import "@/static/fonts/style.css";
+import "@/utils/i18n/locales";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (

@@ -3,3 +3,8 @@ export type ProjectCardType = {
   desc: string;
   hoverImage: string;
 };
+
+export type TechnologiesCardType = {
+  title: string;
+  desc: string;
+};

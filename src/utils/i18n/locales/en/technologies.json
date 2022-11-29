@@ -1,0 +1,38 @@
+{
+  "cards": [
+    {
+      "title": "A lifelike Ailey",
+      "desc": "Realtime Raytracing, Bloomhair and other state-of-the-art rendering technologies are applied to create a live, vivid Ailey."
+    },
+    {
+      "title": "custom engine",
+      "desc": "A proprietary real-time custom engine allows for nearly an infinite number of movements to define Ailey's appearance and implement natural behavior."
+    },
+    {
+      "title": "real-time MOVEMENTS",
+      "desc": "Through the Skeleton skinning system, It embodies real-time muscle movements that you can't see anywhere else."
+    },
+    {
+      "title": "Deep-Learning",
+      "desc": "With the application of active Deep-Learning, Ailey increasingly responds to human-like behaviors."
+    }
+  ],
+  "mobileCards": [
+    {
+      "title": "A lifelike Ailey",
+      "desc": "Realtime Raytracing, Bloomhair and\nother state-of-the-art rendering\ntechnologies are applied to create\na live, vivid Ailey."
+    },
+    {
+      "title": "custom engine",
+      "desc": "A proprietary real-time custom engine\nallows for nearly an infinite number\nof movements to define Ailey's\nappearance and implement natural\nbehavior."
+    },
+    {
+      "title": "real-time MOVEMENTS",
+      "desc": "Through the Skeleton skinning\nsystem, It embodies real-time\nmuscle movements that you can't see\nanywhere else."
+    },
+    {
+      "title": "Deep-Learning",
+      "desc": "With the application of active\nDeep-Learning, Ailey increasingly\nresponds to human-like behaviors."
+    }
+  ]
+}

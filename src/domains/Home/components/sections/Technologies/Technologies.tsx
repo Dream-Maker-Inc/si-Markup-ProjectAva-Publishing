@@ -1,11 +1,21 @@
 import { MediaQueries } from "@/common/themes/Limit";
+import { useCustomMediaQuery } from "@/common/themes/useCustomQueries";
+import { TechnologiesCardType } from "@/type/common.type";
 import { css } from "@emotion/react";
 import { Typography } from "@mui/material";
+import { useTranslation } from "react-i18next";
 import { BackgroundImage } from "./components/BackgroundImage";
 import { Card } from "./components/Card";
-import { models } from "./model/card.model";
 
 export const Technologies = () => {
+  const { isMobile } = useCustomMediaQuery();
+
+  const { t } = useTranslation("technologies");
+  const cards: TechnologiesCardType[] = t("cards", { returnObjects: true });
+  const mobileCards: TechnologiesCardType[] = t("mobileCards", {
+    returnObjects: true,
+  });
+
   return (
     <div id="technologies" css={sx.root}>
       <BackgroundImage />
@@ -14,11 +24,20 @@ export const Technologies = () => {
         <Typography color="white" css={sx.title}>
           {"Technologies"}
         </Typography>
-        <div css={sx.wrapper}>
-          {models.map((it, index) => (
-            <Card key={index} title={it.title} desc={it.desc} />
-          ))}
-        </div>
+
+        {isMobile ? (
+          <div css={sx.wrapper}>
+            {mobileCards.map((it, index) => (
+              <Card key={index} title={it.title} desc={it.desc} />
+            ))}
+          </div>
+        ) : (
+          <div css={sx.wrapper}>
+            {cards.map((it, index) => (
+              <Card key={index} title={it.title} desc={it.desc} />
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );
@@ -39,7 +58,7 @@ const sx = {
     }
   `,
   container: css`
-    width: 74.7vw;
+    width: 74.72vw;
     aspect-ratio: 1/0.654;
     margin-left: 9.16vw;
     display: flex;

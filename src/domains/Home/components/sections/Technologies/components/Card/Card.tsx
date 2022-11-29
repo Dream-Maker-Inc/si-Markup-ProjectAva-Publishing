@@ -1,6 +1,8 @@
 import { MediaQueries } from "@/common/themes/Limit";
+import { localeState } from "@/utils/recoil/locale.atom";
 import { css } from "@emotion/react";
 import { Typography } from "@mui/material";
+import { useRecoilValue } from "recoil";
 
 type CardType = {
   title: string;
@@ -8,12 +10,13 @@ type CardType = {
 };
 
 export const Card = ({ title, desc }: CardType) => {
+  const isEnglish = useRecoilValue(localeState);
   return (
     <div css={sx.cardContainer}>
       <Typography textTransform={"uppercase"} color="white" css={sx.cardTitle}>
         {title}
       </Typography>
-      <Typography color="white" css={sx.cardDesc}>
+      <Typography color="white" css={sx.cardDesc(isEnglish)}>
         {desc}
       </Typography>
     </div>
@@ -23,10 +26,12 @@ export const Card = ({ title, desc }: CardType) => {
 const sx = {
   cardContainer: css`
     width: 100%;
+    height: 21.5vw;
     border-top: 1.5px solid #919191;
     padding-top: 1.25vw;
 
     @media ${MediaQueries.sm} {
+      height: unset;
       padding-top: 2.77vw;
     }
   `,
@@ -41,14 +46,15 @@ const sx = {
       font-size: 6.66vw;
     }
   `,
-  cardDesc: css`
+  cardDesc: (isEnglish: boolean) => css`
+    width: 23.75vw;
     font-size: 1.11vw;
     line-height: 180%;
-    word-break: keep-all;
 
     @media ${MediaQueries.sm} {
-      width: 77.77vw;
+      width: ${isEnglish ? "83.33vw" : "77.77vw"};
       font-size: 3.61vw;
+      white-space: pre-wrap;
     }
   `,
 };

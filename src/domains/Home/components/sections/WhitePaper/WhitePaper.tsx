@@ -1,10 +1,14 @@
 import { Color } from "@/common/themes/Colors";
 import { MediaQueries } from "@/common/themes/Limit";
+import i18n from "@/utils/i18n/locales";
 import { css } from "@emotion/react";
 import { Button, Typography } from "@mui/material";
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 
 export const WhitePaper = () => {
+  const { t } = useTranslation("whitepaper");
+
   return (
     <div css={sx.root}>
       <Image fill src="/assets/whitepaper/bg-mesh.png" alt="background" />
@@ -13,25 +17,25 @@ export const WhitePaper = () => {
           fontWeight={400}
           color={Color.LightPink}
           textAlign="center"
-          css={sx.mainText}
+          css={sx.mainText(i18n.language)}
         >
-          元宇宙中的
-          <br />
-          虚拟偶像
+          {t("main")}
         </Typography>
         <Typography
           fontWeight={500}
           color={Color.LightWhite}
           textAlign="center"
-          css={sx.mainDesc}
+          css={sx.mainDesc(i18n.language)}
         >
-          随着<span className="text-green">AI技术的发展</span>
-          与元宇宙类的<span className="text-green">虚拟空间</span>的普及，
-          <br />
-          <span className="text-blue">超空间</span>
-          里的新自我认知与社区正走向大众。
+          {t("white1")}
+          <span className="text-green">{t("green1")}</span>
+          {t("white2")}
+          <span className="text-green">{t("green2")}</span>
+          {t("white3")}
+          <span className="text-blue">{t("blue1")}</span>
+          {t("white4")}
         </Typography>
-        <Button variant="contained" css={sx.button}>
+        <Button variant="contained" css={sx.button(i18n.language)}>
           <Typography color="black" fontWeight={500} css={sx.buttonText}>
             whitepaper
           </Typography>
@@ -68,31 +72,35 @@ const sx = {
     flex-direction: column;
     align-items: center;
   `,
-  mainText: css`
-    font-size: 10.41vw;
+  mainText: (language: string) => css`
+    font-size: ${language === "en-US" ? "8.33vw" : "10.41vw"};
     line-height: 120%;
     letter-spacing: -1px;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    font-family: "XinYiGuanHeiTi";
+    font-family: ${language === "en-US" ? "Bebas neue" : "XinYiGuanHeiTi"};
+    word-break: keep-all;
+    white-space: pre-wrap;
 
     @media ${MediaQueries.sm} {
-      font-size: 16.66vw;
+      font-size: ${language === "en-US" ? "13.88vw" : "16.66vw"};
     }
   `,
-  mainDesc: css`
-    font-size: 1.66vw;
+  mainDesc: (language: string) => css`
+    font-size: ${language === "en-US" ? "1.38vw" : "1.66vw"};
     line-height: 200%;
-    margin-top: 5.55%;
+    margin-top: ${language === "en-US" ? "3.19vw" : "6.25vw"};
     letter-spacing: 0.2px;
+    word-break: keep-all;
+    white-space: pre-wrap;
 
     @media ${MediaQueries.sm} {
       font-size: 3.88vw;
-      max-width: 72vw;
+      width: 77.77vw;
       line-height: 160%;
-      margin-top: 22.22%;
+      margin-top: ${language === "en-US" ? "11.11%" : "22.22%"};
     }
   `,
-  button: css`
+  button: (language: string) => css`
     width: 17vw;
     aspect-ratio: 1/0.26;
     background-color: ${Color.LightBlue};
@@ -111,7 +119,7 @@ const sx = {
     @media ${MediaQueries.sm} {
       width: 63.33vw;
       aspect-ratio: 1/0.228;
-      margin-top: 28.88%;
+      margin-top: ${language === "en-US" ? "16.66vw" : "28.88vw"};
     }
   `,
   buttonText: css`

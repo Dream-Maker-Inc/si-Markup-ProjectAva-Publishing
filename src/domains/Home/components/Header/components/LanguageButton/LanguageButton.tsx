@@ -1,17 +1,20 @@
+import { LaunguageType } from "@/@types/LantuageType/language.enum";
 import { Color } from "@/common/themes/Colors";
+import i18n from "@/utils/i18n/locales";
 import { css } from "@emotion/react";
 import { Button, Popover, Typography } from "@mui/material";
 import Image from "next/image";
-import { useState } from "react";
+import { useCallback, useState } from "react";
 
 type LanguageButtonProps = {
   isMenuOpen?: boolean;
+  onClose: () => void;
 };
-enum LaunguageType {
-  ENGLISH = "EN",
-  CHINESE = "CN",
-}
-export const LanguageButton = ({ isMenuOpen = false }: LanguageButtonProps) => {
+
+export const LanguageButton = ({
+  isMenuOpen = false,
+  onClose,
+}: LanguageButtonProps) => {
   const [anchorEl, setAnchorEl] = useState<HTMLButtonElement | null>(null);
   const open = Boolean(anchorEl);
 
@@ -23,19 +26,24 @@ export const LanguageButton = ({ isMenuOpen = false }: LanguageButtonProps) => {
     setAnchorEl(null);
   };
 
-  const [isEnglish, setIsEnglish] = useState<LaunguageType>(
-    LaunguageType.ENGLISH
-  );
-
   const onEnglish = () => {
-    setIsEnglish(LaunguageType.ENGLISH);
+    toggleLanguage("en-US");
     setAnchorEl(null);
+    onClose();
   };
 
   const onChinese = () => {
-    setIsEnglish(LaunguageType.CHINESE);
+    toggleLanguage("zh-CN");
     setAnchorEl(null);
+    onClose();
   };
+
+  const toggleLanguage = useCallback(
+    (locale: string) => {
+      i18n.changeLanguage(locale);
+    },
+    [i18n]
+  );
 
   return (
     <div css={sx.languageWrapper(isMenuOpen)}>
@@ -46,7 +54,9 @@ export const LanguageButton = ({ isMenuOpen = false }: LanguageButtonProps) => {
         onClick={handleClick}
       >
         <Typography color="white" lineHeight={1} css={sx.text(isMenuOpen)}>
-          {isEnglish}
+          {i18n.language === "en-US"
+            ? LaunguageType.ENGLISH
+            : LaunguageType.CHINESE}
         </Typography>
         <div css={sx.arrow(isMenuOpen)}>
           {isMenuOpen ? (

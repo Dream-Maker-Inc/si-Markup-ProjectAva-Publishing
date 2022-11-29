@@ -36,7 +36,7 @@ export const MobileMenuView = ({ open, onClose }: MobileMenuViewProps) => {
               </Typography>
             </li>
           ))}
-          <LanguageButton isMenuOpen={true} />
+          <LanguageButton isMenuOpen={true} onClose={onClose} />
         </ul>
         <SnsButtons />
       </div>

@@ -1,15 +1,11 @@
 import { MediaQueries } from "@/common/themes/Limit";
+import { TechnologiesCardType } from "@/type/common.type";
 import { localeState } from "@/utils/recoil/locale.atom";
 import { css } from "@emotion/react";
 import { Typography } from "@mui/material";
 import { useRecoilValue } from "recoil";
 
-type CardType = {
-  title: string;
-  desc: string;
-};
-
-export const Card = ({ title, desc }: CardType) => {
+export const Card = ({ title, desc }: TechnologiesCardType) => {
   const isEnglish = useRecoilValue(localeState);
   return (
     <div css={sx.cardContainer}>

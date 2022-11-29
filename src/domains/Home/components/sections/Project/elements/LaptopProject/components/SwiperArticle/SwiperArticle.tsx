@@ -8,9 +8,13 @@ import { Typography } from "@mui/material";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Color } from "@/common/themes/Colors";
-import { AileyCards } from "../../../models/card.model";
+import { useTranslation } from "react-i18next";
+import { ProjectCardType } from "@/type/common.type";
 
 export const SwiperArticle = () => {
+  const { t } = useTranslation("project");
+  const cards: ProjectCardType[] = t("cards", { returnObjects: true });
+
   const [swiper, setSwiper] = useState<SwiperCore>();
   const slideNext = () => swiper?.slideNext();
   const slidePrev = () => swiper?.slidePrev();
@@ -88,7 +92,7 @@ export const SwiperArticle = () => {
               setSwiper(swiper);
             }}
           >
-            {AileyCards.map((it, index) => {
+            {cards.map((it, index) => {
               if (index < 5) {
                 return (
                   <SwiperSlide key={index} className="custom-swiper-slide">
@@ -203,6 +207,7 @@ const sx = {
     margin-bottom: 10px;
   `,
   cardDesc: css`
+    width: 26.11vw;
     font-size: 1.11vw;
     line-height: 180%;
   `,

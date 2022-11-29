@@ -5,6 +5,8 @@ import { css } from "@emotion/react";
 import { Button, Popover, Typography } from "@mui/material";
 import Image from "next/image";
 import { useCallback, useState } from "react";
+import { useRecoilState, useRecoilValue, useSetRecoilState } from "recoil";
+import { localeState } from "@/utils/recoil/locale.atom";
 
 type LanguageButtonProps = {
   isMenuOpen?: boolean;
@@ -15,6 +17,8 @@ export const LanguageButton = ({
   isMenuOpen = false,
   onClose,
 }: LanguageButtonProps) => {
+  const [isEnglish, setIsEnglish] = useRecoilState(localeState);
+
   const [anchorEl, setAnchorEl] = useState<HTMLButtonElement | null>(null);
   const open = Boolean(anchorEl);
 
@@ -28,12 +32,14 @@ export const LanguageButton = ({
 
   const onEnglish = () => {
     toggleLanguage("en-US");
+    setIsEnglish(true);
     setAnchorEl(null);
     onClose();
   };
 
   const onChinese = () => {
     toggleLanguage("zh-CN");
+    setIsEnglish(false);
     setAnchorEl(null);
     onClose();
   };
@@ -54,9 +60,7 @@ export const LanguageButton = ({
         onClick={handleClick}
       >
         <Typography color="white" lineHeight={1} css={sx.text(isMenuOpen)}>
-          {i18n.language === "en-US"
-            ? LaunguageType.ENGLISH
-            : LaunguageType.CHINESE}
+          {isEnglish ? LaunguageType.ENGLISH : LaunguageType.CHINESE}
         </Typography>
         <div css={sx.arrow(isMenuOpen)}>
           {isMenuOpen ? (

@@ -1,19 +1,22 @@
 import { Color } from "@/common/themes/Colors";
 import { css } from "@emotion/react";
 import { Typography } from "@mui/material";
+import { useTranslation } from "react-i18next";
 
 export const TextSection = () => {
+  const { t } = useTranslation("project");
+
   return (
     <div css={sx.root}>
       <Typography color={Color.LightWhite} css={sx.title}>
         Project Ailey
       </Typography>
       <Typography color={Color.LightWhite} css={sx.desc}>
-        Project Ailey将为日后的游戏、
-        <br />
-        电影、元宇宙等<span className="text-yellow">多样的虚拟空间</span>
-        持续地提供优质的<span className="text-blue">虚拟人形</span>
-        偶像。
+        {t("mobile-white1")}
+        <span className="text-yellow">{t("mobile-yellow1")}</span>
+        {t("mobile-white2")}
+        <span className="text-blue">{t("mobile-blue1")}</span>
+        {t("mobile-white3")}
       </Typography>
     </div>
   );
@@ -38,5 +41,6 @@ const sx = {
     aspect-ratio: 1/0.393;
     font-size: 3.88vw;
     line-height: 170%;
+    white-space: pre-wrap;
   `,
 };

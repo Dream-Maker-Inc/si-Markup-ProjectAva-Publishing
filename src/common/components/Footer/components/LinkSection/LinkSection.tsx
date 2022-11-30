@@ -25,7 +25,7 @@ export const LinkSection = () => {
         </div>
         <div css={sx.links}>
           {LinkModels.map((it, index) => (
-            <Link key={index} image={it.image} sns={it.sns} />
+            <Link key={index} image={it.image} sns={it.sns} link={it.link} />
           ))}
         </div>
       </div>
@@ -70,9 +70,9 @@ const sx = {
   `,
   logo: (isMobile: boolean) => css`
     position: relative;
-    width: ${isMobile ? "44.44vw" : "13.33vw"};
-    aspect-ratio: ${isMobile ? "1/0.387" : "1/0.385"};
-    margin-bottom: ${isMobile ? "12.77vw" : "6.25vw"};
+    width: ${isMobile ? "46.66vw" : "14.44vw"};
+    aspect-ratio: ${isMobile ? "1/0.416" : "1/0.413"};
+    margin-bottom: ${isMobile ? "13.33vw" : "6.18vw"};
   `,
   links: css`
     width: 100%;
@@ -120,9 +120,9 @@ const sx = {
   `,
 };
 
-const Link = ({ image, sns }: LinkType) => {
+const Link = ({ image, sns, link }: LinkType) => {
   return (
-    <div css={sx.link}>
+    <a css={sx.link} href={link} target="_blank" rel="noreferrer">
       <div css={sx.snsImage}>
         <Image fill src={image} alt="logo" />
       </div>
@@ -134,6 +134,6 @@ const Link = ({ image, sns }: LinkType) => {
       >
         {sns}
       </Typography>
-    </div>
+    </a>
   );
 };

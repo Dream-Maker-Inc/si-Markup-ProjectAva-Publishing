@@ -1,4 +1,5 @@
 import { css } from "@emotion/react";
+import Image from "next/image";
 import { TotalCountItem } from "./components";
 import { ArrowIcon } from "./components/ArrowIcon";
 import { ChartLegend } from "./components/ChartLegend";

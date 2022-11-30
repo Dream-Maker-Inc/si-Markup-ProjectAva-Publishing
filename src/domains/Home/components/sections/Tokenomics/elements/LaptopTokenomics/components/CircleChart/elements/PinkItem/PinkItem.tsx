@@ -2,6 +2,7 @@ import { Color } from "@/common/themes/Colors";
 import { css } from "@emotion/react";
 import { Typography } from "@mui/material";
 import Image from "next/image";
+import { pieData } from "../../../../../../models/pieData.model";
 
 export const PinkItem = () => {
   return (
@@ -28,10 +29,10 @@ const sx = {
     width: 16.66vw;
     aspect-ratio: 1/0.212;
   `,
-  box: css`
+  box: (color: string) => css`
     width: 11.45vw;
     aspect-ratio: 1/0.3;
-    background-color: ${Color.LightPink};
+    background-color: ${color};
     display: flex;
     align-items: center;
     justify-content: center;
@@ -43,10 +44,11 @@ const sx = {
 };
 
 const PinkBox = () => {
+  const pinkItemInfo = pieData[4];
   return (
-    <div css={sx.box}>
+    <div css={sx.box(pinkItemInfo.color)}>
       <Typography color="black" fontWeight={500} css={sx.text}>
-        Investors
+        {pinkItemInfo.title}
       </Typography>
     </div>
   );

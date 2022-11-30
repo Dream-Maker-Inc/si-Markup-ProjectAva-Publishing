@@ -2,6 +2,7 @@ import { Color } from "@/common/themes/Colors";
 import { css } from "@emotion/react";
 import { Typography } from "@mui/material";
 import Image from "next/image";
+import { pieData } from "../../../../../../models/pieData.model";
 
 export const PurpleItem = () => {
   return (
@@ -28,10 +29,10 @@ const sx = {
     width: 8.54vw;
     aspect-ratio: 1/0.422;
   `,
-  box: css`
+  box: (color: string) => css`
     width: 18.19vw;
     aspect-ratio: 1/0.19;
-    background-color: ${Color.LightPurple};
+    background-color: ${color};
     display: flex;
     align-items: center;
     justify-content: center;
@@ -39,14 +40,16 @@ const sx = {
   `,
   text: css`
     font-size: 1.11vw;
+    color: white;
   `,
 };
 
 const PurpleBox = () => {
+  const purpleItemInfo = pieData[1];
   return (
-    <div css={sx.box}>
+    <div css={sx.box(purpleItemInfo.color)}>
       <Typography color="black" fontWeight={500} css={sx.text}>
-        Launch Contributors
+        {purpleItemInfo.title}
       </Typography>
     </div>
   );

@@ -1,5 +1,4 @@
 import { css } from "@emotion/react";
-import Image from "next/image";
 import {
   BlueItem,
   GreenItem,
@@ -8,11 +7,12 @@ import {
   TotalCountItem,
   YellowItem,
 } from "./elements";
+import { CustomPieChart } from "./elements/CustomPieChart";
 export const CircleChart = () => {
   return (
     <div css={sx.root}>
       <div css={sx.image}>
-        <Image fill src="/assets/chart/img-chart.png" alt="chart" />
+        <CustomPieChart />
         <BlueItem />
         <YellowItem />
         <PurpleItem />

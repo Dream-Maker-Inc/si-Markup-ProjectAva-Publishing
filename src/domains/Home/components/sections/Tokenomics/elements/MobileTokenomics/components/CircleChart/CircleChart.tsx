@@ -1,14 +1,12 @@
 import { css } from "@emotion/react";
-import Image from "next/image";
 import { TotalCountItem } from "./components";
 import { ArrowIcon } from "./components/ArrowIcon";
 import { ChartLegend } from "./components/ChartLegend";
+import { CustomPieChart } from "./components/CustomPieChart";
 export const CircleChart = () => {
   return (
     <div css={sx.root}>
-      <div css={sx.image}>
-        <Image fill src="/assets/chart/img-chart.png" alt="chart" />
-      </div>
+      <CustomPieChart />
       <TotalCountItem />
       <ChartLegend />
       <ArrowIcon />
@@ -22,11 +20,5 @@ const sx = {
     display: flex;
     flex-direction: column;
     align-items: center;
-  `,
-  image: css`
-    position: relative;
-    width: 100%;
-    aspect-ratio: 1;
-    margin-bottom: 12.5%;
   `,
 };

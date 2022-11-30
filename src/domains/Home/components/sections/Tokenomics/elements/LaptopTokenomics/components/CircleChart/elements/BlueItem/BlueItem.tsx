@@ -1,7 +1,7 @@
-import { Color } from "@/common/themes/Colors";
 import { css } from "@emotion/react";
 import { Typography } from "@mui/material";
 import Image from "next/image";
+import { pieData } from "../../../../../../models/pieData.model";
 
 export const BlueItem = () => {
   return (
@@ -28,10 +28,10 @@ const sx = {
     width: 11.52vw;
     aspect-ratio: 1/0.307;
   `,
-  box: css`
+  box: (color: string) => css`
     width: 16.87vw;
     aspect-ratio: 1/0.205;
-    background-color: ${Color.LightBlue};
+    background-color: ${color};
     display: flex;
     align-items: center;
     justify-content: center;
@@ -43,10 +43,11 @@ const sx = {
 };
 
 const BlueBox = () => {
+  const blueItemInfo = pieData[3];
   return (
-    <div css={sx.box}>
+    <div css={sx.box(blueItemInfo.color)}>
       <Typography color="black" fontWeight={500} css={sx.text}>
-        Ecosystem Rewards
+        {blueItemInfo.title}
       </Typography>
     </div>
   );

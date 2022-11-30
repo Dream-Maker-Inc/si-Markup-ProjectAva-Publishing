@@ -1,7 +1,7 @@
-import { Color } from "@/common/themes/Colors";
 import { css } from "@emotion/react";
 import { Typography } from "@mui/material";
 import Image from "next/image";
+import { pieData } from "../../../../../../models/pieData.model";
 
 export const GreenItem = () => {
   return (
@@ -28,10 +28,10 @@ const sx = {
     width: 13.19vw;
     aspect-ratio: 1/0.273;
   `,
-  box: css`
+  box: (color: string) => css`
     width: 11.45vw;
     aspect-ratio: 1/0.3;
-    background-color: ${Color.LightGreen};
+    background-color: ${color};
     display: flex;
     align-items: center;
     justify-content: center;
@@ -43,10 +43,11 @@ const sx = {
 };
 
 const GreenBox = () => {
+  const greenItemInfo = pieData[0];
   return (
-    <div css={sx.box}>
+    <div css={sx.box(greenItemInfo.color)}>
       <Typography color="black" fontWeight={500} css={sx.text}>
-        NFT Swap
+        {greenItemInfo.title}
       </Typography>
     </div>
   );

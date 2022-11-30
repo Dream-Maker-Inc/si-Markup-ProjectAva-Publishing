@@ -2,6 +2,7 @@ import { Color } from "@/common/themes/Colors";
 import { css } from "@emotion/react";
 import { Typography } from "@mui/material";
 import Image from "next/image";
+import { pieData } from "../../../../../../models/pieData.model";
 
 export const YellowItem = () => {
   return (
@@ -28,10 +29,10 @@ const sx = {
     width: 5.41vw;
     aspect-ratio: 1/0.205;
   `,
-  box: css`
+  box: (color: string) => css`
     width: 18.19vw;
     aspect-ratio: 1/0.19;
-    background-color: ${Color.LightYellow};
+    background-color: ${color};
     display: flex;
     align-items: center;
     justify-content: center;
@@ -42,10 +43,11 @@ const sx = {
 };
 
 const YellowBox = () => {
+  const yellowItemInfo = pieData[2];
   return (
-    <div css={sx.box}>
+    <div css={sx.box(yellowItemInfo.color)}>
       <Typography color="black" fontWeight={500} css={sx.text}>
-        Future Contributors
+        {yellowItemInfo.title}
       </Typography>
     </div>
   );

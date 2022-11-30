@@ -11,15 +11,15 @@ import "@/utils/i18n/locales";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <RecoilRoot>
-      <I18nextProvider i18n={i18n}>
+    <I18nextProvider i18n={i18n}>
+      <RecoilRoot>
         <ThemeProvider theme={findTheme(ThemeTypes.Light)}>
           <Layout>
             <Component {...pageProps} />
           </Layout>
         </ThemeProvider>
-      </I18nextProvider>
-    </RecoilRoot>
+      </RecoilRoot>
+    </I18nextProvider>
   );
 }
 

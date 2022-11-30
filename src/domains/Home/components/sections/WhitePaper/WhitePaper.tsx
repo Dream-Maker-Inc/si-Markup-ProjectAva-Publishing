@@ -24,7 +24,6 @@ export const WhitePaper = () => {
           {t("main")}
         </Typography>
         <Typography
-          fontWeight={500}
           color={Color.LightWhite}
           textAlign="center"
           css={sx.mainDesc(isEnglish)}
@@ -73,15 +72,18 @@ const sx = {
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+    z-index: 2;
   `,
   mainText: (isEnglish: boolean) => css`
+    width: 67.77vw;
     font-size: ${isEnglish ? "8.33vw" : "10.41vw"};
     line-height: 120%;
-    letter-spacing: -1px;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     font-family: ${isEnglish ? "Bebas Neue" : "XinYiGuanHeiTi"};
     word-break: keep-all;
     white-space: pre-wrap;
+    letter-spacing: ${isEnglish ? "-0.01rem" : "0rem"};
 
     @media ${MediaQueries.sm} {
       font-size: ${isEnglish ? "13.88vw" : "16.66vw"};
@@ -94,6 +96,7 @@ const sx = {
     letter-spacing: 0.2px;
     word-break: keep-all;
     white-space: pre-wrap;
+    font-weight: ${isEnglish ? "400" : "500"};
 
     @media ${MediaQueries.sm} {
       font-size: 3.88vw;

@@ -76,7 +76,6 @@ const sx = {
     z-index: 2;
   `,
   mainText: (isEnglish: boolean) => css`
-    width: 67.77vw;
     font-size: ${isEnglish ? "8.33vw" : "10.41vw"};
     line-height: 120%;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);

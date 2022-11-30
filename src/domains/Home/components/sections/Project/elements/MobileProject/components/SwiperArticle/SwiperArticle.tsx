@@ -14,7 +14,7 @@ import { useTranslation } from "react-i18next";
 
 export const SwiperArticle = () => {
   const { t } = useTranslation("project");
-  const cards: ProjectCardType[] = t("cards", { returnObjects: true });
+  const cards: ProjectCardType[] = t("mobileCards", { returnObjects: true });
 
   const [swiper, setSwiper] = useState<SwiperCore>();
   const slideNext = () => swiper?.slideNext();
@@ -52,10 +52,18 @@ export const SwiperArticle = () => {
                 <div css={sx.card}>
                   <div css={sx.filter}></div>
                   <div css={sx.cardTextContainer}>
-                    <Typography color={Color.LightGreen} css={sx.cardTitle}>
+                    <Typography
+                      color={Color.LightGreen}
+                      fontWeight={500}
+                      css={sx.cardTitle}
+                    >
                       {it.title}
                     </Typography>
-                    <Typography color={Color.LightWhite} css={sx.cardDesc}>
+                    <Typography
+                      color={Color.LightWhite}
+                      fontWeight={400}
+                      css={sx.cardDesc}
+                    >
                       {it.desc}
                     </Typography>
                   </div>

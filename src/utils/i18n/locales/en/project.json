@@ -42,5 +42,32 @@
       "desc": "",
       "hoverImage": ""
     }
+  ],
+  "mobileCards": [
+    {
+      "title": "Ailey 01",
+      "desc": "Ailey was born breaking the shell and living her own life in the metaverse space of Eden.",
+      "hoverImage": "/assets/project/swiper/ailey-1.png"
+    },
+    {
+      "title": "Ailey 02",
+      "desc": "Ailey is given a unique look and personality at birth.",
+      "hoverImage": "/assets/project/swiper/ailey-2.png"
+    },
+    {
+      "title": "Ailey 03",
+      "desc": "You can interact with and learn from Ailey, and you can make Ailey more lively.",
+      "hoverImage": "/assets/project/swiper/ailey-3.png"
+    },
+    {
+      "title": "Ailey 04",
+      "desc": "Ailey can be a celebrity or a friend of yours through her many experiences at Eden.",
+      "hoverImage": "/assets/project/swiper/ailey-4.png"
+    },
+    {
+      "title": "Ailey 05",
+      "desc": "Ailey The most advanced meta-human.",
+      "hoverImage": "/assets/project/swiper/ailey-5.png"
+    }
   ]
 }

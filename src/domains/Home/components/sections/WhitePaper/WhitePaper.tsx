@@ -19,12 +19,7 @@ export const WhitePaper = () => {
       {isMobile ? (
         <div css={sx.imageWrapper}>
           <div css={sx.image}>
-            <Image
-              fill
-              src="/assets/whitepaper/bg-mesh.png"
-              alt="background"
-              css={sx.image}
-            />
+            <Image fill src="/assets/whitepaper/bg-mesh.png" alt="background" />
           </div>
         </div>
       ) : (

@@ -15,7 +15,16 @@ export const LinkSection = () => {
 
   return (
     <div css={sx.root}>
-      <Image fill src={"/assets/footer/img-mesh.png"} alt="mesh" />
+      {isMobile ? (
+        <div css={sx.imageWrapper}>
+          <div css={sx.image}>
+            <Image fill src={"/assets/footer/img-mesh.png"} alt="mesh" />
+          </div>
+        </div>
+      ) : (
+        <Image fill src={"/assets/footer/img-mesh.png"} alt="mesh" />
+      )}
+
       <div css={sx.container}>
         <Typography color={Color.Primary} lineHeight={"130%"} css={sx.title}>
           {isMobile ? title.mobile : title.laptop}
@@ -35,25 +44,41 @@ export const LinkSection = () => {
 
 const sx = {
   root: css`
-    width: 100%;
+    width: 100vw;
+    aspect-ratio: 1/0.359;
     background-color: ${Color.LightPink};
     position: relative;
     z-index: 0;
-    padding-top: 4.86vw;
-    padding-bottom: 8.33vw;
 
     @media ${MediaQueries.sm} {
-      padding-top: 19.44vw;
-      padding-bottom: 25.55vw;
+      width: 100vw;
+      aspect-ratio: 1/1.77;
+      overflow-x: hidden;
     }
   `,
+
+  imageWrapper: css`
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  `,
+  image: css`
+    position: relative;
+    width: 252.22vw;
+    aspect-ratio: 1/0.704;
+  `,
   container: css`
-    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
     z-index: 1;
+    padding-top: 4.86vw;
+
+    @media ${MediaQueries.sm} {
+      padding-top: 19.44vw;
+    }
   `,
   title: css`
     font-family: "Bebas neue";

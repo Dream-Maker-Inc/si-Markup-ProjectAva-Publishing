@@ -1,5 +1,6 @@
 import { Color } from "@/common/themes/Colors";
 import { MediaQueries } from "@/common/themes/Limit";
+import { useCustomMediaQuery } from "@/common/themes/useCustomQueries";
 import { localeState } from "@/utils/recoil/locale.atom";
 import { css } from "@emotion/react";
 import { Button, Typography } from "@mui/material";
@@ -8,13 +9,29 @@ import { useTranslation } from "react-i18next";
 import { useRecoilValue } from "recoil";
 
 export const WhitePaper = () => {
+  const { isMobile } = useCustomMediaQuery();
+
   const { t } = useTranslation("whitepaper");
   const isEnglish = useRecoilValue(localeState);
 
   return (
     <div css={sx.root}>
-      <Image fill src="/assets/whitepaper/bg-mesh.png" alt="background" />
-      <div css={sx.content}>
+      {isMobile ? (
+        <div css={sx.imageWrapper}>
+          <div css={sx.image}>
+            <Image
+              fill
+              src="/assets/whitepaper/bg-mesh.png"
+              alt="background"
+              css={sx.image}
+            />
+          </div>
+        </div>
+      ) : (
+        <Image fill src="/assets/whitepaper/bg-mesh.png" alt="background" />
+      )}
+
+      <div css={sx.content(isEnglish)}>
         <Typography
           fontWeight={400}
           color={Color.LightPink}
@@ -62,18 +79,36 @@ const sx = {
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow-x: hidden;
 
     @media ${MediaQueries.sm} {
+      align-items: unset;
       aspect-ratio: 1/1.776;
     }
   `,
-  content: css`
+
+  imageWrapper: css`
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  `,
+  image: css`
+    position: relative;
+    width: 252.22vw;
+    aspect-ratio: 1/0.704;
+  `,
+  content: (isEnglish: boolean) => css`
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
     z-index: 2;
+
+    @media ${MediaQueries.sm} {
+      padding-top: ${isEnglish ? "19.44vw" : "23.88vw"};
+    }
   `,
   mainText: (isEnglish: boolean) => css`
     font-size: ${isEnglish ? "8.33vw" : "10.41vw"};
@@ -86,6 +121,7 @@ const sx = {
 
     @media ${MediaQueries.sm} {
       font-size: ${isEnglish ? "13.88vw" : "16.66vw"};
+      height: ${isEnglish ? "50vw" : "40vw"};
     }
   `,
   mainDesc: (isEnglish: boolean) => css`

@@ -14,8 +14,8 @@ export const Logo = () => {
 const sx = {
   logo: css`
     position: relative;
-    width: 20.55vw;
-    aspect-ratio: 1/ 0.391;
+    width: 24.16vw;
+    aspect-ratio: 1/ 0.413;
     z-index: 10;
     cursor: pointer;
   `,

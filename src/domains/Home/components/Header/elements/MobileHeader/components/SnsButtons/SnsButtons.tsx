@@ -1,13 +1,16 @@
+import {
+  LinkModels,
+  LinkType,
+} from "@/common/components/Footer/components/LinkSection/models/link.model";
 import { Color } from "@/common/themes/Colors";
 import { css } from "@emotion/react";
 import Image from "next/image";
-import { LinkModels, LinkType } from "./models/link.model";
 
 export const SnsButtons = () => {
   return (
     <div css={sx.snsContainer}>
       {LinkModels.map((it, index) => (
-        <SnsBox key={index} image={it.image} />
+        <SnsBox key={index} image={it.image} link={it.link} />
       ))}
     </div>
   );
@@ -41,12 +44,12 @@ const sx = {
   `,
 };
 
-const SnsBox = ({ image }: LinkType) => {
+const SnsBox = ({ image, link }: LinkType) => {
   return (
-    <div css={sx.sns}>
+    <a css={sx.sns} href={link} target="_blank" rel="noreferrer">
       <div css={sx.image}>
         <Image fill src={image} alt="snsImage" />
       </div>
-    </div>
+    </a>
   );
 };

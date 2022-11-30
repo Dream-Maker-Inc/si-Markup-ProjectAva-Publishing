@@ -1,6 +1,6 @@
 export type LinkType = {
   image: string;
-  sns: string;
+  sns?: string;
   link: string;
 };
 

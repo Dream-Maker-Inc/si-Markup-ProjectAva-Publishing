@@ -1,3 +1,4 @@
+import { Color } from "@/common/themes/Colors";
 import { MediaQueries } from "@/common/themes/Limit";
 import { useCustomMediaQuery } from "@/common/themes/useCustomQueries";
 import { TechnologiesCardType } from "@/types/common.type";
@@ -21,7 +22,10 @@ export const Technologies = () => {
       <BackgroundImage />
       <div css={sx.opacity}></div>
       <div css={sx.container}>
-        <Typography color="white" css={sx.title}>
+        <Typography
+          color={isMobile ? Color.LightWhite : Color.Primary}
+          css={sx.title}
+        >
           {"Technologies"}
         </Typography>
 

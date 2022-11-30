@@ -37,7 +37,7 @@ export const SwiperArticle = () => {
             color={Color.PrimaryGrey}
             css={sx.cardCountText}
           >
-            <span className="text-white">0{activeIndex}</span> / 04
+            <span className="text-white">0{activeIndex}</span> / 05
           </Typography>
           <div css={sx.btnWrapper}>
             {activeIndex === 1 ? (

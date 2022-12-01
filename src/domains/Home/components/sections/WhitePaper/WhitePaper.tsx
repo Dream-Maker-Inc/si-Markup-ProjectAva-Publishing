@@ -81,7 +81,6 @@ const sx = {
       aspect-ratio: 1/1.776;
     }
   `,
-
   imageWrapper: css`
     position: absolute;
     top: 0;

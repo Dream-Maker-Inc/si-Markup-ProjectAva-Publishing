@@ -16,8 +16,8 @@ type MobileMenuViewProps = {
 
 export const MobileMenuView = ({ open, onClose }: MobileMenuViewProps) => {
   const { isMobile } = useCustomMediaQuery();
-  const router = useRouter();
 
+  const router = useRouter();
   const onLinkClick = (href: string) => {
     router.push(href);
     onClose();
@@ -30,7 +30,6 @@ export const MobileMenuView = ({ open, onClose }: MobileMenuViewProps) => {
         ) : (
           <Image fill src={"/assets/header/img-mesh.png"} alt="mesh" />
         )}
-
         <div css={sx.top}>
           <Logo />
           <MobileIconButton isMenuOpen={open} onClick={onClose} />
@@ -67,8 +66,6 @@ const sx = {
   `,
   image: css`
     position: relative;
-    /* width: 252.22vw;
-    aspect-ratio: 1/0.704; */
     width: 908px;
     height: 640px;
   `,

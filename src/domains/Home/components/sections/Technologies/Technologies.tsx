@@ -57,7 +57,7 @@ const sx = {
 
     @media ${MediaQueries.sm} {
       aspect-ratio: 1/3.244;
-      display: unset;
+      /* display: unset;*/
       align-items: unset;
     }
   `,

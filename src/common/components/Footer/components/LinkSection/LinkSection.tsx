@@ -16,11 +16,7 @@ export const LinkSection = () => {
   return (
     <div css={sx.root}>
       {isMobile ? (
-        <div css={sx.imageWrapper}>
-          <div css={sx.image}>
-            <Image fill src={"/assets/footer/img-mesh.png"} alt="mesh" />
-          </div>
-        </div>
+        <Image fill src={"/assets/footer/img-mesh-mobile.png"} alt="mesh" />
       ) : (
         <Image fill src={"/assets/footer/img-mesh.png"} alt="mesh" />
       )}

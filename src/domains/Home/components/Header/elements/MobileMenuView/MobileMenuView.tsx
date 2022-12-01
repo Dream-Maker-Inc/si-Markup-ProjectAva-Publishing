@@ -1,3 +1,4 @@
+import { useCustomMediaQuery } from "@/common/themes/useCustomQueries";
 import { css } from "@emotion/react";
 import { Dialog, Typography } from "@mui/material";
 import Image from "next/image";
@@ -14,6 +15,7 @@ type MobileMenuViewProps = {
 };
 
 export const MobileMenuView = ({ open, onClose }: MobileMenuViewProps) => {
+  const { isMobile } = useCustomMediaQuery();
   const router = useRouter();
 
   const onLinkClick = (href: string) => {
@@ -23,7 +25,12 @@ export const MobileMenuView = ({ open, onClose }: MobileMenuViewProps) => {
   return (
     <Dialog open={open} fullScreen>
       <div css={sx.root}>
-        <Image fill src={"/assets/header/img-mesh.png"} alt="mesh" />
+        {isMobile ? (
+          <Image fill src={"/assets/header/img-mesh-mobile.png"} alt="mesh" />
+        ) : (
+          <Image fill src={"/assets/header/img-mesh.png"} alt="mesh" />
+        )}
+
         <div css={sx.top}>
           <Logo />
           <MobileIconButton isMenuOpen={open} onClick={onClose} />
@@ -50,6 +57,20 @@ const sx = {
     height: 100%;
     background-color: black;
     position: relative;
+  `,
+
+  imageWrapper: css`
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  `,
+  image: css`
+    position: relative;
+    /* width: 252.22vw;
+    aspect-ratio: 1/0.704; */
+    width: 908px;
+    height: 640px;
   `,
   top: css`
     width: 100%;

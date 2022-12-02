@@ -8,8 +8,6 @@ body {
   height: 100%;
   padding: 0;
   margin: 0;
-
-  font-family: "IBM Plex Mono", monospace;
 }
 
 html {
@@ -22,7 +20,7 @@ a {
 }
 
 p {
-  letter-spacing: 0.2px;
+  letter-spacing: 0.013vw;
 }
 
 * {
@@ -65,4 +63,8 @@ p {
 
 .swiper-pagination .swiper-pagination-bullet {
   background-color: #d9d9d9;
+}
+
+.eng {
+  font-family: "IBM Plex Mono", monospace !important;
 }

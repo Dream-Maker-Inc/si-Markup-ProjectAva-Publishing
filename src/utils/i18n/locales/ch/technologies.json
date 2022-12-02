@@ -2,38 +2,38 @@
   "cards": [
     {
       "title": "A lifelike Ailey",
-      "desc": "通过Realtime Raytracing, Bloom hair等渲染技术，力求创造最优质的Ailey。"
+      "desc": "通过<span className=\"eng\">Realtime Raytracing, Bloom hair</span>等渲染技术，力求创造最优质的<span className=\"eng\">Ailey</span>。"
     },
     {
       "title": "custom engine",
-      "desc": "自研实时Custom Engine，生成无限的Ailey外形组合与行动模组。"
+      "desc": "自研实时<span className=\"eng\">Custom Engine</span>，生成无限的<span className=\"eng\">Ailey</span>外形组合与行动模组。"
     },
     {
       "title": "real-time MOVEMENTS",
-      "desc": "运用Skeleton skinning system来生动地实现前所未有的实时肌肉动作。"
+      "desc": "运用<span className=\"eng\">Skeleton skinning system</span>来生动地实现前所未有的实时肌肉动作。"
     },
     {
       "title": "Deep-Learning",
-      "desc": "Ailey将凭借自主Deep-Learning变得更贴近人类。"
+      "desc": "<span className=\"eng\">Ailey</span>将凭借自主<span className=\"eng\">Deep-Learning</span>变得更贴近人类。"
     }
   ],
 
   "mobileCards": [
     {
       "title": "A lifelike Ailey",
-      "desc": "通过Realtime Raytracing, Bloom hair等渲染技术，力求创造最优质的Ailey。"
+      "desc": "通过<span className=\"eng\">Realtime Raytracing, Bloom hair</span>等渲染技术，力求创造最优质的<span className=\"eng\">Ailey</span>。"
     },
     {
       "title": "custom engine",
-      "desc": "自研实时Custom Engine，生成无限的Ailey外形组合与行动模组。"
+      "desc": "自研实时<span className=\"eng\">Custom Engine</span>，生成无限的<span className=\"eng\">Ailey</span>外形组合与行动模组。"
     },
     {
       "title": "real-time MOVEMENTS",
-      "desc": "运用Skeleton skinning system来生动地实现前所未有实时肌肉动作。"
+      "desc": "运用<span className=\"eng\">Skeleton skinning system</span>来生动地实现前所未有实时肌肉动作。"
     },
     {
       "title": "Deep-Learning",
-      "desc": "Ailey将凭借能动性Deep-Learning变得更贴近人类。"
+      "desc": "<span className=\"eng\">Ailey</span>将凭借能动性<span className=\"eng\">Deep-Learning</span>变得更贴近人类。"
     }
   ]
 }

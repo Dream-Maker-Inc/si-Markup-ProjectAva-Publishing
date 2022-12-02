@@ -17,7 +17,7 @@ const sx = {
     font-family: "Bebas neue";
     font-size: 10vw;
     line-height: 130%;
-    letter-spacing: 0.2px;
+    letter-spacing: -0.013vw;
     margin-bottom: 8.33vw;
 
     @media ${MediaQueries.xs} {

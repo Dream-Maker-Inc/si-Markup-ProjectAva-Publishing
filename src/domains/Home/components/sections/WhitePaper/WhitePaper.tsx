@@ -7,6 +7,7 @@ import { Button, Typography } from "@mui/material";
 import Image from "next/image";
 import { useTranslation } from "react-i18next";
 import { useRecoilValue } from "recoil";
+import parse from "html-react-parser";
 
 export const WhitePaper = () => {
   const { isMobile } = useCustomMediaQuery();
@@ -41,7 +42,7 @@ export const WhitePaper = () => {
           css={sx.mainDesc(isEnglish)}
         >
           {t("white1")}
-          <span className="text-green">{t("green1")}</span>
+          <span className="text-green">{parse(t("green1"))}</span>
           {t("white2")}
           <span className="text-green">{t("green2")}</span>
           {t("white3")}
@@ -101,7 +102,7 @@ const sx = {
     z-index: 2;
 
     @media ${MediaQueries.sm} {
-      padding-top: ${isEnglish ? "19.44vw" : "23.88vw"};
+      padding-top: ${isEnglish ? "20.8vw" : "23.88vw"};
     }
   `,
   mainText: (isEnglish: boolean) => css`
@@ -111,7 +112,7 @@ const sx = {
     font-family: ${isEnglish ? "Bebas Neue" : "XinYiGuanHeiTi"};
     word-break: keep-all;
     white-space: pre-wrap;
-    letter-spacing: ${isEnglish ? "-0.01rem" : "0rem"};
+    letter-spacing: -0.069vw;
 
     @media ${MediaQueries.sm} {
       font-size: ${isEnglish ? "13.88vw" : "16.66vw"};
@@ -119,17 +120,15 @@ const sx = {
     }
   `,
   mainDesc: (isEnglish: boolean) => css`
-    font-size: ${isEnglish ? "1.38vw" : "1.66vw"};
-    line-height: 200%;
+    font-size: 1.38vw;
+    line-height: 180%;
     margin-top: ${isEnglish ? "3.19vw" : "6.25vw"};
-    letter-spacing: 0.2px;
-    word-break: keep-all;
     white-space: pre-wrap;
-    font-weight: ${isEnglish ? "400" : "500"};
+    font-family: ${isEnglish ? "IBM Plex Mono" : "Heiti SC"};
 
     @media ${MediaQueries.sm} {
+      width: ${isEnglish ? "72.77vw" : "77.77vw"};
       font-size: 3.88vw;
-      width: 77.77vw;
       line-height: 160%;
       margin-top: ${isEnglish ? "11.11%" : "22.22%"};
     }

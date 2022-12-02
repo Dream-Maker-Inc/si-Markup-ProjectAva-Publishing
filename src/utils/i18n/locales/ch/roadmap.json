@@ -2,7 +2,10 @@
   "YearItemModels": [
     {
       "year": "2022 Q4",
-      "content": ["1st NFT Minting", "Ailey电脑版beta测试"]
+      "content": [
+        "1<span className=\"eng\">st NFT Minting</span>",
+        "<span className=\"eng\">Ailey</span>电脑版<span className=\"eng\">beta</span>测试"
+      ]
     },
 
     {
@@ -12,30 +15,39 @@
 
     {
       "year": "2024 Q2",
-      "content": ["移动设备dApp上线"]
+      "content": ["移动设备<span className=\"eng\">dApp</span>上线"]
     }
   ],
 
   "ReverseYearItemModels": [
     {
       "year": "2023 Q1",
-      "content": ["2nd NFT Minting", "去中心化交易所上币"]
+      "content": [
+        "2<span className=\"eng\">nd NFT Minting</span>",
+        "去中心化交易所上币"
+      ]
     },
 
     {
       "year": "2023 Q4",
-      "content": ["Ailey换装系统更新"]
+      "content": ["<span className=\"eng\">Ailey</span>换装系统更新"]
     }
   ],
 
   "TotalYearItemModls": [
     {
       "year": "2022 Q4",
-      "content": ["1st NFT Minting", "Ailey电脑版beta测试"]
+      "content": [
+        "1<span className=\"eng\">st NFT Minting</span>",
+        "Ailey电脑版beta测试"
+      ]
     },
     {
       "year": "2023 Q1",
-      "content": ["2nd NFT Minting", "去中心化交易所上币"]
+      "content": [
+        "2<span className=\"eng\">nd NFT Minting</span>",
+        "去中心化交易所上币"
+      ]
     },
 
     {
@@ -45,12 +57,12 @@
 
     {
       "year": "2023 Q4",
-      "content": ["Ailey换装系统更新"]
+      "content": ["<span className=\"eng\">Ailey</span>换装系统更新"]
     },
 
     {
       "year": "2024 Q2",
-      "content": ["移动设备dApp上线"]
+      "content": ["移动设备<span className=\"eng\">dApp</span>上线"]
     }
   ]
 }

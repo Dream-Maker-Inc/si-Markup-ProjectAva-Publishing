@@ -104,7 +104,7 @@ const sx = {
     font-size: 4.44vw;
     line-height: 130%;
     font-family: "Bebas neue";
-    letter-spacing: 0.2px;
+    letter-spacing: -0.013vw;
     z-index: 2;
 
     @media ${MediaQueries.sm} {

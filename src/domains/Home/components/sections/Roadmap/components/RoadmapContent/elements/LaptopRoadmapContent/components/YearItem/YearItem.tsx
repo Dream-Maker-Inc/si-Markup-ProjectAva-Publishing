@@ -3,8 +3,13 @@ import { RoadmapCardType } from "@/types/common.type";
 import { css } from "@emotion/react";
 import { Typography } from "@mui/material";
 import Image from "next/image";
+import parse from "html-react-parser";
+import { useRecoilValue } from "recoil";
+import { localeState } from "@/utils/recoil/locale.atom";
 
 export const YearItem = ({ year, content }: RoadmapCardType) => {
+  const isEnglish = useRecoilValue(localeState);
+
   return (
     <div css={sx.root}>
       <ContentSection year={year} content={content} />
@@ -35,8 +40,6 @@ const sx = {
     position: relative;
     width: 0.069vw;
     flex-grow: 1;
-    //border 사용 시
-    //border: 0.069vw dashed white;
   `,
   polygon: css`
     position: relative;
@@ -56,8 +59,10 @@ const sx = {
     text-align: center;
   `,
 
-  text: css`
+  text: (isEnglish: boolean) => css`
     font-size: 1.25vw;
+    line-height: ${isEnglish ? "160%" : "130%"};
+    font-family: ${isEnglish ? "IBM Plex Mono" : "Heiti SC"};
     &::before {
       content: "· ";
     }
@@ -79,6 +84,8 @@ const sx = {
 };
 
 const ContentSection = ({ year, content }: RoadmapCardType) => {
+  const isEnglish = useRecoilValue(localeState);
+
   return (
     <div css={sx.content}>
       <div css={sx.box}>
@@ -92,9 +99,9 @@ const ContentSection = ({ year, content }: RoadmapCardType) => {
             <Typography
               lineHeight={"160%"}
               color={Color.LightWhite}
-              css={sx.text}
+              css={sx.text(isEnglish)}
             >
-              {it}
+              {parse(it)}
             </Typography>
           </li>
         ))}

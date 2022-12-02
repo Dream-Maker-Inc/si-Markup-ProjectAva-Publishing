@@ -4,6 +4,7 @@ import { localeState } from "@/utils/recoil/locale.atom";
 import { css } from "@emotion/react";
 import { Typography } from "@mui/material";
 import { useRecoilValue } from "recoil";
+import parse from "html-react-parser";
 
 export const Card = ({ title, desc }: TechnologiesCardType) => {
   const isEnglish = useRecoilValue(localeState);
@@ -13,7 +14,7 @@ export const Card = ({ title, desc }: TechnologiesCardType) => {
         {title}
       </Typography>
       <Typography color="white" css={sx.cardDesc(isEnglish)}>
-        {desc}
+        {parse(desc)}
       </Typography>
     </div>
   );
@@ -36,7 +37,7 @@ const sx = {
     line-height: 160%;
     margin-bottom: 1.25vw;
     font-family: "Bebas neue";
-    letter-spacing: 0.03em;
+    letter-spacing: 0.069vw;
 
     @media ${MediaQueries.sm} {
       font-size: 6.66vw;
@@ -46,9 +47,10 @@ const sx = {
     width: 23.75vw;
     font-size: 1.11vw;
     line-height: 180%;
+    font-family: ${isEnglish ? "IBM Plex Mono" : "Heiti SC"};
 
     @media ${MediaQueries.sm} {
-      width: ${isEnglish ? "83.33vw" : "77.77vw"};
+      width: ${isEnglish ? "83.33vw" : "77vw"};
       font-size: 3.61vw;
       white-space: pre-wrap;
     }

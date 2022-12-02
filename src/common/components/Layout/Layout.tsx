@@ -27,9 +27,9 @@ export const Layout = ({ children }: LayoutProps) => {
           content="virtual human, virtual influencer, digital human, digital influencer, robot, AI, deep learning, metaverse, game, video game, meta world, metabus, innovation, virtual reality, community"
         />
         <meta property="og:title" content="Project Ailey" />
+        <meta property="og:url" content="http://myailey.com" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="assets/thumbnail/thumbnailpng" />
-        <meta property="og:article:author" content="Golden Egg Foundation" />
+        <meta property="og:image" content="/assets/thumbnail/thumbnailpng" />
         <meta
           property="og:description"
           content="Project Ailey is a virtual human project, a celebrity who lives and moves in a virtual space and will be active in spaces such as games, movies, and metaverse in the future."

@@ -11,8 +11,12 @@ import { SwiperHeader } from "./components/SwiperHeader";
 import { Color } from "@/common/themes/Colors";
 import { ProjectCardType } from "@/types/common.type";
 import { useTranslation } from "react-i18next";
+import parse from "html-react-parser";
+import { useRecoilValue } from "recoil";
+import { localeState } from "@/utils/recoil/locale.atom";
 
 export const SwiperArticle = () => {
+  const isEnglish = useRecoilValue(localeState);
   const { t } = useTranslation("project");
   const cards: ProjectCardType[] = t("mobileCards", { returnObjects: true });
 
@@ -62,9 +66,9 @@ export const SwiperArticle = () => {
                     <Typography
                       color={Color.LightWhite}
                       fontWeight={400}
-                      css={sx.cardDesc}
+                      css={sx.cardDesc(isEnglish)}
                     >
-                      {it.desc}
+                      {parse(it.desc)}
                     </Typography>
                   </div>
                 </div>
@@ -137,7 +141,6 @@ const sx = {
     width: 100%;
     aspect-ratio: 1/0.55;
   `,
-
   filter: css`
     width: 100%;
     height: 100%;
@@ -160,10 +163,11 @@ const sx = {
     line-height: 180%;
     margin-bottom: 2.77vw;
   `,
-  cardDesc: css`
+  cardDesc: (isEnglish: boolean) => css`
     width: 66.66vw;
     font-size: 3.61vw;
     line-height: 160%;
+    font-family: ${isEnglish ? "IBM Plex Mono" : "Heiti SC"};
   `,
 
   btnWrapper: css`

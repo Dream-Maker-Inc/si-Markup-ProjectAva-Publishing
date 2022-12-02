@@ -10,8 +10,12 @@ import "swiper/css/pagination";
 import { Color } from "@/common/themes/Colors";
 import { useTranslation } from "react-i18next";
 import { ProjectCardType } from "@/types/common.type";
+import { useRecoilValue } from "recoil";
+import { localeState } from "@/utils/recoil/locale.atom";
+import parse from "html-react-parser";
 
 export const SwiperArticle = () => {
+  const isEnglish = useRecoilValue(localeState);
   const { t } = useTranslation("project");
   const cards: ProjectCardType[] = t("cards", { returnObjects: true });
 
@@ -111,9 +115,9 @@ export const SwiperArticle = () => {
                         <Typography
                           fontWeight={400}
                           color="white"
-                          css={sx.cardDesc}
+                          css={sx.cardDesc(isEnglish)}
                         >
-                          {it.desc}
+                          {parse(it.desc)}
                         </Typography>
                       </div>
                       <div css={sx.filter}></div>
@@ -206,10 +210,11 @@ const sx = {
     line-height: 180%;
     margin-bottom: 10px;
   `,
-  cardDesc: css`
+  cardDesc: (isEnglish: boolean) => css`
     width: 26.11vw;
     font-size: 1.11vw;
     line-height: 180%;
+    font-family: ${isEnglish ? "IBM Plex Mono" : "Heiti SC"};
   `,
   swiperHeader: css`
     width: 100%;

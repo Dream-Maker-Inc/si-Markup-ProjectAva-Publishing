@@ -4,6 +4,7 @@ import { css } from "@emotion/react";
 import { Typography } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import { useRecoilValue } from "recoil";
+import parse from "html-react-parser";
 
 export const TextSection = () => {
   const { t } = useTranslation("project");
@@ -15,11 +16,7 @@ export const TextSection = () => {
         Project Ailey
       </Typography>
       <Typography color={Color.LightWhite} css={sx.desc(isEnglish)}>
-        {t("white1")}
-        <span className="text-yellow">{t("yellow1")}</span>
-        {t("white2")}
-        <span className="text-blue">{t("blue1")}</span>
-        {t("white3")}
+        {parse(t("desc"))}
       </Typography>
     </div>
   );
@@ -36,11 +33,13 @@ const sx = {
     line-height: 130%;
     font-family: "Bebas Neue";
     margin-bottom: 3.47vw;
+    letter-spacing: -0.013vw;
   `,
   desc: (isEnglish: boolean) => css`
     width: 67.77vw;
     font-size: ${isEnglish ? "1.38vw" : "1.66vw"};
-    line-height: ${isEnglish ? "160%" : "200%"};
+    line-height: ${isEnglish ? "180%" : "200%"};
+    font-family: ${isEnglish ? "IBM Plex Mono" : "Heiti SC"};
     word-break: keep-all;
     white-space: pre-wrap;
   `,

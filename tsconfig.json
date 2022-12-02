@@ -27,7 +27,8 @@
     "**/*.tsx",
     "src/utils/i18n/index.js",
     "src/utils/i18n/locales/en/index.js",
-    "src/utils/i18n/locales/초/index.js"
+    "src/utils/i18n/locales/초/index.js",
+    "src/pages/_document.js"
   ],
   "exclude": ["node_modules"]
 }

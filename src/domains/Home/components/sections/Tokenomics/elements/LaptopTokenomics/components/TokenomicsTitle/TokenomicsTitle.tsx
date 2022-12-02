@@ -17,5 +17,6 @@ const sx = {
     font-size: 4.44vw;
     line-height: 130%;
     margin-bottom: 9.16vw;
+    letter-spacing: -0.013vw;
   `,
 };

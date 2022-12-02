@@ -1,12 +1,16 @@
 import { Color } from "@/common/themes/Colors";
 import { TokenomicsCardType } from "@/types/common.type";
+import { localeState } from "@/utils/recoil/locale.atom";
 import { css } from "@emotion/react";
 import { Typography } from "@mui/material";
+import parse from "html-react-parser";
+import { useRecoilValue } from "recoil";
 
 export const FlowSlide = ({
   slideTitle,
   slideTextList,
 }: TokenomicsCardType) => {
+  const isEnglish = useRecoilValue(localeState);
   return (
     <div css={sx.root}>
       <Typography
@@ -43,6 +47,7 @@ const sx = {
     font-size: 2.5vw;
     margin-bottom: 6.95%;
     font-family: "Bebas neue";
+    letter-spacing: 0px;
   `,
   box: css`
     width: 100%;
@@ -52,9 +57,10 @@ const sx = {
     align-items: center;
     justify-content: center;
   `,
-  boxText: css`
+  boxText: (isEnglish: boolean) => css`
     font-size: 1.25vw;
     white-space: pre-wrap;
+    font-family: ${isEnglish ? "IBM Plex Mono" : "Heiti SC"};
   `,
 };
 
@@ -63,10 +69,15 @@ type BoxProps = {
 };
 
 const Box = ({ text }: BoxProps) => {
+  const isEnglish = useRecoilValue(localeState);
   return (
     <div css={sx.box}>
-      <Typography color={Color.Primary} lineHeight={"160%"} css={sx.boxText}>
-        {text}
+      <Typography
+        color={Color.Primary}
+        lineHeight={"160%"}
+        css={sx.boxText(isEnglish)}
+      >
+        {parse(text)}
       </Typography>
     </div>
   );

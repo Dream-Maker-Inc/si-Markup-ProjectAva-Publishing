@@ -1,15 +1,6 @@
 {
-  "white1": "Project Ailey is a ",
-  "yellow1": "virtual human project, a celebrity ",
-  "white2": "who lives and moves in a ",
-  "blue1": "virtual space ",
-  "white3": "and will be active in spaces such as games, movies, and metaverse in the future.",
-
-  "mobile-white1": "Project Ailey is a ",
-  "mobile-yellow1": "virtual human project, a celebrity ",
-  "mobile-white2": "who lives and moves in a ",
-  "mobile-blue1": "virtual space ",
-  "mobile-white3": "and will be active in spaces such as games, movies, and metaverse in the future.",
+  "desc": "Project Ailey is a <span className=\"text-blue\">virtual human project, a celebrity</span> who lives and moves in a <span className=\"text-yellow\">virtual space</span> and will be active in spaces such as games, movies, and metaverse in the future.",
+  "mobile-desc": "Project Ailey is a <span className=\"text-blue\">virtual human project, a celebrity</span> who lives and moves in a <span className=\"text-yellow\">virtual space</span> and will be active in spaces such as games, movies, and metaverse in the future.",
 
   "cards": [
     {

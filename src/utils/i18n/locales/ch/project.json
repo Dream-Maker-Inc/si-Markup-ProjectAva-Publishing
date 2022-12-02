@@ -1,40 +1,31 @@
 {
-  "white1": "Project Ailey将为日后的游戏、\n电影、元宇宙等",
-  "yellow1": "多样的虚拟空间",
-  "white2": "持续提供优质",
-  "blue1": "虚拟人形",
-  "white3": "偶像。",
-
-  "mobile-white1": "Project Ailey将为日后的游戏、\n电影、元宇宙等",
-  "mobile-yellow1": "多样的虚拟空间",
-  "mobile-white2": "持续地提供优质的",
-  "mobile-blue1": "虚拟人形",
-  "mobile-white3": "偶像。",
+  "desc": "Project Ailey将为日后的游戏、\n电影、元宇宙等<span className=\"text-yellow\">多样的虚拟空间</span>持续提供优质<span className=\"text-blue\">虚拟人形</span>偶像。",
+  "mobile-desc": "Project Ailey将为日后的游戏、\n电影、元宇宙等<span className=\"text-yellow\">多样的虚拟空间</span>持续地提供优质的<span className=\"text-blue\">虚拟人形</span>偶像。",
 
   "cards": [
     {
       "title": "Ailey 01",
-      "desc": "Ailey将打破外壳，并在元宇宙的Eden里存在。",
+      "desc": "<span className=\"eng\">Ailey</span>将打破外壳，并在元宇宙的<span className=\"eng\">Eden</span>里存在。",
       "hoverImage": "/assets/project/swiper/ailey-1.png"
     },
     {
       "title": "Ailey 02",
-      "desc": "Ailey在破壳而出后，会被赋予独特的外貌与性格。",
+      "desc": "<span className=\"eng\">Ailey</span>在破壳而出后，会被赋予独特的外貌与性格。",
       "hoverImage": "/assets/project/swiper/ailey-2.png"
     },
     {
       "title": "Ailey 03",
-      "desc": "您可以通过与Ailey互动来让Ailey进行学习，让Ailey更加接近人类。",
+      "desc": "您可以通过与<span className=\"eng\">Ailey</span>互动来让<span className=\"eng\">Ailey</span>进行学习，让<span className=\"eng\">Ailey</span>更加接近人类。",
       "hoverImage": "/assets/project/swiper/ailey-3.png"
     },
     {
       "title": "Ailey 04",
-      "desc": "Ailey在Eden当中技能成为偶像，也能成为您的朋友。",
+      "desc": "<span className=\"eng\">Ailey</span>在<span className=\"eng\">Eden</span>当中技能成为偶像，也能成为您的朋友。",
       "hoverImage": "/assets/project/swiper/ailey-4.png"
     },
     {
       "title": "Ailey 05",
-      "desc": "Ailey，超越一切。",
+      "desc": "<span className=\"eng\">Ailey</span>，超越一切。",
       "hoverImage": "/assets/project/swiper/ailey-5.png"
     },
     {
@@ -47,27 +38,27 @@
   "mobileCards": [
     {
       "title": "Ailey 01",
-      "desc": "Ailey将打破外壳，并在元宇宙的Eden里存在。",
+      "desc": "<span className=\"eng\">Ailey</span>将打破外壳，并在元宇宙的<span className=\"eng\">Eden</span>里存在。",
       "hoverImage": "/assets/project/swiper/ailey-1.png"
     },
     {
       "title": "Ailey 02",
-      "desc": "Ailey在破壳而出后，会被赋予独特的外貌与性格。",
+      "desc": "<span className=\"eng\">Ailey</span>在破壳而出后，会被赋予独特的外貌与性格。",
       "hoverImage": "/assets/project/swiper/ailey-2.png"
     },
     {
       "title": "Ailey 03",
-      "desc": "您可以通过与Ailey互动来让Ailey进行学习，让Ailey更加接近人类。",
+      "desc": "您可以通过与<span className=\"eng\">Ailey</span>互动来让<span className=\"eng\">Ailey</span>进行学习，让<span className=\"eng\">Ailey</span>更加接近人类。",
       "hoverImage": "/assets/project/swiper/ailey-3.png"
     },
     {
       "title": "Ailey 04",
-      "desc": "Ailey在Eden当中技能成为偶像，也能成为您的朋友。",
+      "desc": "<span className=\"eng\">Ailey</span>在<span className=\"eng\">Eden</span>当中技能成为偶像，也能成为您的朋友。",
       "hoverImage": "/assets/project/swiper/ailey-4.png"
     },
     {
       "title": "Ailey 05",
-      "desc": "Ailey，超越一切。",
+      "desc": "<span className=\"eng\">Ailey</span>，超越一切。",
       "hoverImage": "/assets/project/swiper/ailey-5.png"
     }
   ]

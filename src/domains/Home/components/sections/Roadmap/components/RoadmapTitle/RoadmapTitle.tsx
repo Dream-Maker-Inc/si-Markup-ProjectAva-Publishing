@@ -17,6 +17,7 @@ const sx = {
     height: 5.76vw;
     font-size: 4.44vw;
     line-height: 130%;
+    letter-spacing: -0.013vw;
 
     @media ${MediaQueries.sm} {
       font-size: 10vw;

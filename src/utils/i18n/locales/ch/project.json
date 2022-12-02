@@ -1,6 +1,6 @@
 {
-  "desc": "Project Ailey将为日后的游戏、\n电影、元宇宙等<span className=\"text-yellow\">多样的虚拟空间</span>持续提供优质<span className=\"text-blue\">虚拟人形</span>偶像。",
-  "mobile-desc": "Project Ailey将为日后的游戏、\n电影、元宇宙等<span className=\"text-yellow\">多样的虚拟空间</span>持续地提供优质的<span className=\"text-blue\">虚拟人形</span>偶像。",
+  "desc": "<span className=\"eng\">Project Ailey</span>将为日后的游戏、\n电影、元宇宙等<span className=\"text-yellow\">多样的虚拟空间</span>持续提供优质<span className=\"text-blue\">虚拟人形</span>偶像。",
+  "mobile-desc": "<span className=\"eng\">Project Ailey</span>将为日后的游戏、\n电影、元宇宙等<span className=\"text-yellow\">多样的虚拟空间</span>持续地提供优质的<span className=\"text-blue\">虚拟人形</span>偶像。",
 
   "cards": [
     {

@@ -5,7 +5,8 @@
   "cards": [
     {
       "title": "Ailey 01",
-      "desc": "<span className=\"eng\">Ailey</span>将打破外壳，并在元宇宙的<span className=\"eng\">Eden</span>里存在。",
+
+      "desc": "<span className=\"eng\">Ailey</span>将打破外壳，并在名为<span className=\"eng\">Aileyverse</span>的元宇宙里存在。",
       "hoverImage": "/assets/project/swiper/ailey-1.png"
     },
     {
@@ -20,7 +21,7 @@
     },
     {
       "title": "Ailey 04",
-      "desc": "<span className=\"eng\">Ailey</span>在<span className=\"eng\">Eden</span>当中技能成为偶像，也能成为您的朋友。",
+      "desc": "<span className=\"eng\">Ailey</span>在<span className=\"eng\">Aileyverse</span>当中技能成为偶像，也能成为您的朋友。",
       "hoverImage": "/assets/project/swiper/ailey-4.png"
     },
     {
@@ -38,7 +39,7 @@
   "mobileCards": [
     {
       "title": "Ailey 01",
-      "desc": "<span className=\"eng\">Ailey</span>将打破外壳，并在元宇宙的<span className=\"eng\">Eden</span>里存在。",
+      "desc": "<span className=\"eng\">Ailey</span>将打破外壳，并在名为<span className=\"eng\">Aileyverse</span>的元宇宙里存在。",
       "hoverImage": "/assets/project/swiper/ailey-1.png"
     },
     {
@@ -53,7 +54,7 @@
     },
     {
       "title": "Ailey 04",
-      "desc": "<span className=\"eng\">Ailey</span>在<span className=\"eng\">Eden</span>当中技能成为偶像，也能成为您的朋友。",
+      "desc": "<span className=\"eng\">Ailey</span>在<span className=\"eng\">Aileyverse</span>当中技能成为偶像，也能成为您的朋友。",
       "hoverImage": "/assets/project/swiper/ailey-4.png"
     },
     {

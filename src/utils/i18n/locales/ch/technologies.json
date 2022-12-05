@@ -2,7 +2,7 @@
   "cards": [
     {
       "title": "A lifelike Ailey",
-      "desc": "通过<span className=\"eng\">Realtime Raytracing, Bloom hair</span>等渲染技术，力求创造最优质的<span className=\"eng\">Ailey</span>。"
+      "desc": "通过<span className=\"eng\">Realtime Raytracing, Bloom hair</span>等渲染技术，力求创造更为生动的<span className=\"eng\">Ailey</span>。"
     },
     {
       "title": "custom engine",
@@ -21,7 +21,7 @@
   "mobileCards": [
     {
       "title": "A lifelike Ailey",
-      "desc": "通过<span className=\"eng\">Realtime Raytracing, Bloom hair</span>等渲染技术，力求创造最优质的<span className=\"eng\">Ailey</span>。"
+      "desc": "通过<span className=\"eng\">Realtime Raytracing, Bloom hair</span>等渲染技术，力求创造更为生动的<span className=\"eng\">Ailey</span>。"
     },
     {
       "title": "custom engine",

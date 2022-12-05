@@ -1,7 +1,7 @@
 import { useCustomMediaQuery } from "@/common/themes/useCustomQueries";
 import { css } from "@emotion/react";
-import { LaptopRoadmapContent } from "./\belements/LaptopRoadmapContent";
-import { MobileRoadmapContent } from "./\belements/MobileRoadmapContent";
+import { LaptopRoadmapContent } from "./elements/LaptopRoadmapContent";
+import { MobileRoadmapContent } from "./elements/MobileRoadmapContent";
 
 export const RoadmapContent = () => {
   const { isMobile } = useCustomMediaQuery();
